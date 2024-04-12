@@ -1,0 +1,134 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  padding-top: 20px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.header__inner {
+  max-width: 1230%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center; /* アイテムを垂直方向の中央に配置 */
+  justify-content: space-between; /* アイテムを左右に均等に配置 */
+}
+
+.header__logo {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100px;
+  width: auto;
+  margin-left: 0;
+}
+
+.header__menu ul {
+  display: flex;
+  list-style: none; /* リストのマーカー（点）を消す */
+}
+
+.header__menu {
+  color: #000000;
+  margin-right: 20px; /* 項目間のスペース */
+  text-decoration: none;
+}
+
+.header__menu-contact {
+  margin-right: 0; /* 最後の項目の右マージンをなくす */
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  background-color: #000000;
+}
+
+.footer__border-top-black {
+  border-top: 1px solid #000000;
+}
+
+.footer__inner {
+  max-width: 100%;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
+.footer__menu {
+  justify-content: space-between;
+}
+
+.footer__menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.footer__menu-item > :last-child {
+  margin-right: 0;
+}
+
+.menu__item {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.footer__submenu {
+  font-size: 0.75em;
+  margin: 2px 0;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  color: #ffffff;
+}
+
+.main {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top__content-about {
+  margin: 10%;
+}
+
+.top__content-about_1 {
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.top__content-about_1 h1 {
+  color: #000000;
+  font-size: 8em;
+}
+
+.top__content-about_2 {
+  background-color: #000000;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.top__content-about_2 h1 {
+  color: #ffffff;
+  font-size: 8em;
+}
