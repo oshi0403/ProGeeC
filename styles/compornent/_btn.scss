@@ -1,0 +1,33 @@
+
+.component__btn-readmore{
+    display: inline-block;
+    width: $width-btn;
+    max-width: 100%;//画面の横幅が＄width-btn以下になった時に画面外にボタンがはみ出るのを防ぐ
+    padding: $top-padding-vertical $top-padding-horizontal;
+    background-color: $black;
+    border: 2px solid transparent;
+    color: $white;
+    font-size: $content-text-size;
+    text-align: center;
+    text-decoration: none;
+    transition: $transition-btn;
+    //以下は矢印のためのスタイリング
+    position:relative;
+    padding-right: $content-text-size;
+    padding-left: $content-text-size/2;
+
+    &:hover{ //同じ要素について疑似要素を実装するときにはネストする際＆が必須！
+        background-color: $white;
+        border-color: currentColor;
+        
+        color: $black;
+    }
+    &::after{
+        content:'/f061';//右矢印の番号
+        position: absolute;
+        top: 50%;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        transform: translateY(-50%);
+    }
+}

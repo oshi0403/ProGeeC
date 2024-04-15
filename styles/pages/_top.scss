@@ -2,7 +2,13 @@ $black: #000000;
 $white: #ffffff;
 $top-padding-horizontal:30px;
 $top-padding-vertical:20px;
-$content-about-size: 8em;
+$content-about-size: 6em;
+$content-title-size:3em;
+$content-catchcopy-size: 2em;
+$content-text-size: 1em;
+$margin-content-text: 30px;
+$width-btn: 200px;
+$transition-btn: .25s;
 
 .main{
     max-width: 1230px;
@@ -13,7 +19,7 @@ $content-about-size: 8em;
 }
 
 .top__content-about{
-    margin: 10%;
+    margin: 300px 10%;
 }
 
 .top__content-about_1{
@@ -21,20 +27,56 @@ $content-about-size: 8em;
     padding: $top-padding-horizontal;
     display: flex;
     justify-content: center;
-}
-.top__content-about_1 h1{
-    color: $black;
-    font-size: $content-about-size;
-}
+    max-width: 100%;
 
+    h1{
+        color: $black;
+        font-size: $content-about-size; 
+    }
+}
 .top__content-about_2{
     background-color: $black;
     padding: $top-padding-horizontal;
     display: flex;
     justify-content: center;
+    max-width: 100%;
+
+    h1{
+        color: $white;
+        font-size: $content-about-size;  
+    }
 }
-.top__content-about_2 h1{
-    color: $white;
-    font-size: $content-about-size;
-    
+.top__content-title{
+    display: flex;
+    justify-content: center;
+    padding: $top-padding-vertical*2 $top-padding-horizontal*2;
+
+    h1{
+        font-size: $content-title-size;//個別にh1などをネストして書くことができる
+    }
 }
+.top__content-service-detail{
+    display: flex;
+    justify-content: space-between;
+
+}
+.top__content-service-image{
+    width: 50%;
+    padding: $top-padding-vertical $top-padding-horizontal;
+}
+.top__content-service-text{
+    width: 50%;
+    text-align: center;
+    padding: $top-padding-vertical $top-padding-horizontal;
+
+    h1{
+        font-size: $content-catchcopy-size;
+        margin-bottom: $margin-content-text;
+    }
+    p{
+        font-size: $content-text-size;
+        margin-bottom: $margin-content-text;
+        text-align: left;
+    }
+}
+

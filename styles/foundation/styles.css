@@ -106,7 +106,7 @@ body {
 }
 
 .top__content-about {
-  margin: 10%;
+  margin: 300px 10%;
 }
 
 .top__content-about_1 {
@@ -114,11 +114,11 @@ body {
   padding: 30px;
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
-
 .top__content-about_1 h1 {
   color: #000000;
-  font-size: 8em;
+  font-size: 6em;
 }
 
 .top__content-about_2 {
@@ -126,9 +126,61 @@ body {
   padding: 30px;
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
-
 .top__content-about_2 h1 {
   color: #ffffff;
-  font-size: 8em;
+  font-size: 6em;
+}
+
+.top__content-title {
+  display: flex;
+  justify-content: center;
+  padding: 40px 60px;
+}
+.top__content-title h1 {
+  font-size: 3em;
+}
+
+.top__content-service-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__content-service-image {
+  width: 50%;
+  padding: 20px 30px;
+}
+
+.top__content-service-text {
+  width: 50%;
+  text-align: center;
+  padding: 20px 30px;
+}
+.top__content-service-text h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.top__content-service-text p {
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.component__btn {
+  display: inline-block;
+  width: 200px;
+  max-width: 100%;
+  padding: 20px 30px;
+  background-color: #000000;
+  border: 2px solid transparent;
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.component__btn:hover {
+  background-color: #ffffff;
+  border-color: currentColor;
+  color: #000000;
 }
