@@ -105,7 +105,7 @@ body {
   margin-right: auto;
 }
 
-.top__content-about {
+#top__content-about {
   margin: 300px 10%;
 }
 
@@ -164,9 +164,115 @@ body {
 .top__content-service-text p {
   font-size: 1em;
   margin-bottom: 30px;
+  text-align: left;
 }
 
-.component__btn {
+.top__content-news-detail {
+  max-width: 100%;
+  text-align: center;
+}
+.top__content-news-detail ul {
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.top__content-recruit-detail {
+  max-width: 100%;
+  text-align: center;
+}
+.top__content-recruit-detail h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.top__content-recruit-detail p {
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.main {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__mv {
+  max-width: 100%;
+  text-align: center;
+  margin: 100px 0 100px 0;
+}
+.about__mv h1 {
+  font-size: 3em;
+  font-weight: bold;
+  padding: 30px 20px;
+}
+
+.about-mission__contents {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  padding: 0 20% 0 20%;
+}
+.about-mission__contents h2 {
+  font-size: 4em;
+  font-weight: bold;
+  margin: 100px 0 100px 0;
+}
+.about-mission__contents p {
+  font-size: 18px;
+  font-weight: 700px;
+  margin: 100px 0 100px 0;
+}
+
+.about-vision {
+  background-color: #000000;
+  padding: 20px 0 20px 0;
+}
+
+.about-vision__mv {
+  color: #ffffff;
+}
+
+.about-vision__content {
+  text-align: center;
+  padding: 30px 20px;
+  padding: 0 20% 0 20%;
+}
+.about-vision__content h2 {
+  font-size: 4em;
+  font-weight: bold;
+  margin: 100px 0 100px 0;
+  color: #ffffff;
+}
+.about-vision__content p {
+  font-size: 18px;
+  font-weight: 700px;
+  margin: 100px 0 100px 0;
+  color: #ffffff;
+}
+
+.about-value__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.about-value__content .about-value__content__item {
+  text-align: center;
+  max-width: 30%;
+  padding: 20px 30px;
+}
+.about-value__content .about-value__content__title {
+  font-size: 2em;
+  text-align: center;
+}
+.about-value__content .about-value__content__text {
+  font-size: 18px;
+  text-align: left;
+  padding-left: 18px;
+}
+
+.component__btn-readmore {
   display: inline-block;
   width: 200px;
   max-width: 100%;
@@ -178,9 +284,21 @@ body {
   text-align: center;
   text-decoration: none;
   transition: 0.25s;
+  position: relative;
+  padding-right: 1em;
+  padding-left: 1em;
 }
-.component__btn:hover {
+.component__btn-readmore:hover {
   background-color: #ffffff;
   border-color: currentColor;
   color: #000000;
+}
+.component__btn-readmore::after {
+  content: "\f061";
+  position: absolute;
+  padding: 20px 30px;
+  top: 50%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-50%);
 }
