@@ -302,3 +302,30 @@ body {
   font-weight: 900;
   transform: translateY(-50%);
 }
+
+.component__contact__form {
+  margin-bottom: 30px;
+  padding: 15px 15px;
+}
+.component__contact__form h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.component__contact__form label {
+  font-size: 1em;
+  text-align: left;
+}
+.component__contact__form input {
+  text-align: left;
+}
+.component__contact__form input#name, .component__contact__form input#email, .component__contact__form input#tel, .component__contact__form input#com-name {
+  width: 100%;
+  height: 3em;
+  margin-bottom: 30px;
+}
+.component__contact__form textarea {
+  width: 100%;
+  height: 9em;
+  margin-bottom: 30px;
+}

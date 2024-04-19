@@ -45,6 +45,7 @@
                         </div>
                         <div class = "top__content-company-detail-text">
                             <h1></h1>
+                            <a class = "component__btn-readmore" href = "compamy.html">Read More</a>
 
                         </div>
                         
@@ -64,7 +65,7 @@
                         <div class = "top__content-service-text">
                             <h1>キャッチコピー</h1>
                             <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p>
-                            <a class = "component__btn-readmore" href = "#">Read More</a>
+                            <a class = "component__btn-readmore" href = "service.html">Read More</a>
                         </div>
 
 
@@ -78,7 +79,7 @@
                         <li class = "top__news-posts__item">news</li>
                         
                     </ul>
-                    <a class = "component__btn-readmore" href = "#">Read More</a>
+                    <a class = "component__btn-readmore" href = "news.html">Read More</a>
 
                 </div>
             </section>
@@ -88,7 +89,7 @@
                     <div class = "top__content-recruit-detail">
                         <h1>採用情報</h1>
                         <p>採用情報の本文採用情報の本文採用情報の本文採用情報の本文採用情報の本文採用情報の本文</p>
-                        <a class = "component__btn-readmore" href = "#">Read More</a>
+                        <a class = "component__btn-readmore" href = "recruit.html">Read More</a>
                     </div>
                     
 
@@ -97,6 +98,31 @@
             <section id = "top__content-contact">
                 <div>
                     <div class = "top__content-title top__content-contact-title"><h1>CONTACT</h1></div>
+                    <div class = "component__contact__form">
+                        <h1>お問い合わせフォーム</h1>
+                        <form action = "http://localhost/progeec_php/receive.php" method = "post">
+                            <label for = "which">転職をお考えの方:</label>
+                            <input type = "radio" id = "job" name = "which" value = "求職者">
+                            <label for = "which">企業の方:</label>
+                            <input type = "radio" id = "company" name = "which" value = "企業"><br>
+                            <label for = "name">名前：</label><br>
+                            <input type = "text" id = "name" name = "name"><br>
+                            <label for = "email">メールアドレス：</label><br>
+                            <input type = "email" id = "email" name = "email"><br>
+                            <label for = "tel">電話番号:</label><br>
+                            <input type = "tel" id = "tel" name = "tel"><br>
+                            <label for com-name>企業名（任意）</label><br>
+                            <input type = "text" id = "com-name" name = "com-name"><br>
+                            <label for = "content">お問い合わせ内容（詳細）:</label><br>
+                            <textarea id = "content" name = "content" wrap="hard"></textarea><br>
+                            <label for = "agree">個人情報の取り扱いについて</label><br>
+                            <p>同意する<input type = "checkbox" id = "agree" name = "agree" value = "yes"></p><br>
+                           
+                            <input type = "submit" id = "submit" name = "submit">
+
+                        </form>
+
+                    </div>
 
 
                 </div>
