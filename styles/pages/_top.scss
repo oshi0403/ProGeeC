@@ -22,18 +22,6 @@ $margin-content-text: 30px;
 }
 
 .top__content-about_1{
-    background-color: $white;
-    padding: $top-padding-horizontal;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-
-    h1{
-        color: $black;
-        font-size: $content-about-size; 
-    }
-}
-.top__content-about_2{
     background-color: $black;
     padding: $top-padding-horizontal;
     display: flex;
@@ -42,9 +30,22 @@ $margin-content-text: 30px;
 
     h1{
         color: $white;
+        font-size: $content-about-size; 
+    }
+}
+.top__content-about_2{
+    background-color: $white;
+    padding: $top-padding-horizontal;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    h1{
+        color: $black;
         font-size: $content-about-size;  
     }
 }
+
 .top__content-title{
     display: flex;
     justify-content: center;
@@ -54,16 +55,16 @@ $margin-content-text: 30px;
         font-size: $content-title-size;//個別にh1などをネストして書くことができる
     }
 }
-.top__content-service-detail{
+.top__content-company-detail, .top__content-service-detail {
     display: flex;
     justify-content: space-between;
 
 }
-.top__content-service-image{
+.top__content-company-image, .top__content-service-image {
     width: 50%;
     padding: $top-padding-vertical $top-padding-horizontal;
 }
-.top__content-service-text{
+.top__content-company-text, .top__content-service-text{
     width: 50%;
     text-align: center;
     padding: $top-padding-vertical $top-padding-horizontal;

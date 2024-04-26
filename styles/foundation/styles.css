@@ -110,26 +110,26 @@ body {
 }
 
 .top__content-about_1 {
-  background-color: #ffffff;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-.top__content-about_1 h1 {
-  color: #000000;
-  font-size: 6em;
-}
-
-.top__content-about_2 {
   background-color: #000000;
   padding: 30px;
   display: flex;
   justify-content: center;
   max-width: 100%;
 }
-.top__content-about_2 h1 {
+.top__content-about_1 h1 {
   color: #ffffff;
+  font-size: 6em;
+}
+
+.top__content-about_2 {
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.top__content-about_2 h1 {
+  color: #000000;
   font-size: 6em;
 }
 
@@ -142,26 +142,26 @@ body {
   font-size: 3em;
 }
 
-.top__content-service-detail {
+.top__content-company-detail, .top__content-service-detail {
   display: flex;
   justify-content: space-between;
 }
 
-.top__content-service-image {
+.top__content-company-image, .top__content-service-image {
   width: 50%;
   padding: 20px 30px;
 }
 
-.top__content-service-text {
+.top__content-company-text, .top__content-service-text {
   width: 50%;
   text-align: center;
   padding: 20px 30px;
 }
-.top__content-service-text h1 {
+.top__content-company-text h1, .top__content-service-text h1 {
   font-size: 2em;
   margin-bottom: 30px;
 }
-.top__content-service-text p {
+.top__content-company-text p, .top__content-service-text p {
   font-size: 1em;
   margin-bottom: 30px;
   text-align: left;
@@ -254,22 +254,121 @@ body {
 
 .about-value__content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 .about-value__content .about-value__content__item {
   text-align: center;
-  max-width: 30%;
+  width: 840px;
   padding: 20px 30px;
 }
 .about-value__content .about-value__content__title {
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 100px;
 }
 .about-value__content .about-value__content__text {
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   padding-left: 18px;
+}
+
+.p__company-greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+  margin: 30px;
+}
+
+.p__company-title {
+  width: 100%;
+  margin: 30px;
+  text-align: center;
+}
+.p__company-title h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.p__company-detail {
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.p__company-detail .p__company-detail-image {
+  width: 50%;
+}
+.p__company-detail .p__company-detail-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.p__company-detail .p__company-detail-text h2 {
+  font-size: 2em;
+}
+.p__company-detail .p__company-detail-text p {
+  font-size: 1em;
+}
+
+.p__company-info-content {
+  width: 840px;
+  margin: 30px auto;
+}
+.p__company-info-content p {
+  text-align: left;
+  font-size: 1em;
+}
+
+.p__company-history {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+  margin: 30px;
+}
+
+.p__company-history-content {
+  width: 50%;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.p__company-history-year, .p__company-history-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p__company-history-year {
+  font-size: 2em;
+  margin-left: 30px;
+}
+
+.p__company-history-text {
+  font-size: 1em;
+  margin-right: 30px;
+}
+
+.p__news-title {
+  width: 100%;
+  margin: 30px;
+  text-align: center;
+}
+.p__news-title h1 {
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .component__btn-readmore {
@@ -315,6 +414,7 @@ body {
 .component__contact__form label {
   font-size: 1em;
   text-align: left;
+  margin-bottom: 15px;
 }
 .component__contact__form input {
   text-align: left;
@@ -328,4 +428,11 @@ body {
   width: 100%;
   height: 9em;
   margin-bottom: 30px;
+}
+
+.c__line-horizontal {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #d3d3d3;
+  margin: 20px auto;
 }

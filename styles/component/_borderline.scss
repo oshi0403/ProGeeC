@@ -1,0 +1,12 @@
+$black: #000000;
+$white: #ffffff;
+$light-gray: #d3d3d3;
+$border-bottom-company-info: 2px;
+$margin-vertical-company-info: 20px;
+
+.c__line-horizontal{
+    display: block;
+    width: 100%;
+    border-bottom: $border-bottom-company-info solid $light-gray;
+    margin: $margin-vertical-company-info auto;
+}
