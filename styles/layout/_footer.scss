@@ -1,0 +1,65 @@
+$black: #000000;
+$white: #ffffff;
+$footer-padding-horizontal:30px;//水平方向
+$footer-menu-item-spacing: 20px;//メニューの間隔
+$footer-padding-vertical: 20px;//垂直方向
+$submenu-padding-left: 20px;//サブメニューだとわかる用の余白
+
+.footer {
+    padding-top:$footer-padding-vertical;
+    padding-right:$footer-padding-vertical;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $footer-padding-vertical 0;
+    background-color: $black;
+}
+
+.footer__border-top-black {
+    border-top: 1px solid $black;
+    
+}
+
+.footer__inner {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.footer__menu{
+    justify-content: space-between;
+}
+
+.footer__menu-item {
+    display: flex;
+    flex-wrap: wrap;//要素が多い場合に折り返してくれる
+    
+    justify-content: space-between;
+    color: $white;
+}
+.footer__menu-item > :last-child{
+    margin-right: 0;
+}
+.menu__item{
+    font-size:1.5em;
+    margin-bottom: $footer-padding-vertical;
+}
+.footer__submenu{
+    font-size:0.75em;
+    margin: 2px 0;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: space-between; /* 水平方向の中央揃え */
+    color: $white;
+    margin-right: auto;
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+

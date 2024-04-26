@@ -1,0 +1,113 @@
+$mv-size: 6em;
+$sub-mv-size: 2em;
+$sub-underline: 320px;
+$item-title-size: 2em;
+$item-content-size: 1em;
+$margin-vertical: 2em;
+$margin-horizontal: 6em;
+$black: #000000;
+$white: #ffffff;
+  
+
+
+.p__policy__mv{
+    margin: $margin-vertical $margin-horizontal;
+    max-width:100%;
+    h1{
+        font-size: $mv-size;   
+        font-weight: bold;
+    }  
+}
+.p__policy__mv-sub{
+    
+    margin: $margin-vertical $margin-horizontal;
+    span{
+        display: inline-block;
+        border-bottom: 2px solid $black;
+        width: $sub-underline;
+
+        animation: appear .5s ease-out forwards;
+        @keyframes appear {
+            from { width: 0px; }
+            to { width: $sub-underline; }
+        }
+    }
+    h2{
+        font-size: $sub-mv-size;   
+    }
+}
+.p__policy__area{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.p__policy__prologue{
+    margin: $margin-vertical*2 $margin-horizontal*2;
+}
+.p__policy__list{
+
+    text-align: left;
+    margin: $margin-vertical $margin-horizontal;
+    padding: 0 15px;
+    h1{
+        font-size: $item-title-size;
+    }
+
+}
+.p__policy__list p, .p__policy__list-son p, .p__policy__list-gson p{
+    margin-bottom: $margin-vertical;
+    font-size: $item-content-size;
+}
+.p__policy__list-son{
+    counter-reset: list-son;
+}
+.p__policy__list-son-item{
+    position: relative;
+    padding-left: 2em;
+    
+}
+.p__policy__list-son-item::before{
+    content:counter(list-son)'.';
+    position: absolute;
+    top:0;
+    left:0;
+    color: $black;
+    counter-increment: list-son;
+}
+.p__policy__list-gson{
+    counter-reset: list-gson;
+}
+.p__policy__list-gson-item{
+    position: relative;
+    padding-left: 2em;
+    
+}
+.p__policy__list-gson-item::before{
+    
+    content:'('counter(list-gson)'）';
+    position: absolute;
+    top:0;
+    left:0;
+    color: $black;
+    counter-increment: list-gson;
+}
+.p__policy__list-ggson{
+    counter-reset: list-ggson;
+}
+.p__policy__list-ggson-item{
+    position: relative;
+    padding-left: 2.5em;
+    
+}
+.p__policy__list-ggson-item::before{
+    
+    content:'<'counter(list-ggson)'>';
+    position: absolute;
+    top:0;
+    left:0;
+    color: $black;
+    counter-increment: list-ggson;
+}
