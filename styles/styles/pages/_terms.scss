@@ -1,0 +1,69 @@
+$black: #000000;
+$white: #ffffff;
+$mv-size: 6em;
+$item-title-size: 2em;
+$item-subtitle-size: 1.5em;
+$item-content-size: 1em;
+$margin-horizontal:6em;
+$margin-vertical: 2em;
+
+
+.p__terms__mv{
+    margin: $margin-vertical $margin-horizontal;
+    h1{
+        font-size:$mv-size;
+        font-weight: bold;
+        max-width: 100%;
+    }
+}
+.p__terms__area{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.p__terms__prologue{
+    margin: $margin-vertical*2 $margin-horizontal*2;
+    font-size: $item-content-size;
+}
+.p__terms__list{
+
+    text-align: left;
+    margin: $margin-vertical $margin-horizontal;
+    padding: 0 15px;
+    h1{
+        font-size: $item-title-size;
+    }
+}
+.p__terms__list-son{
+    h2{
+        font-size: $item-subtitle-size;
+    }
+}
+.p__terms__list p, .p__terms__list-son p, .p__terms__list-gson p{
+    margin-bottom: $margin-vertical;
+    font-size: $item-content-size;
+    padding-left: $item-content-size;
+}
+.p__terms__list p, .p__terms__list-son p, .p__terms__list-gson p > *:first-child{
+    margin-top: $margin-vertical;
+}
+//オーダーリストに数字をつける
+.p__terms__list-gson{
+    counter-reset: p__terms__list-gson;
+}
+.p__terms__list-gson__item{
+    position: relative;
+    padding-left: $item-content-size;
+}
+.p__terms__list-gson__item::before{
+    content:'\00a0'counter(p__terms__list-gson)'.';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $black;
+    counter-increment: p__terms__list-gson;
+}
+

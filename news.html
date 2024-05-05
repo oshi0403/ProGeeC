@@ -1,3 +1,6 @@
+<?php require_once('cmstest/wp-load.php'); ?>
+
+
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
@@ -29,7 +32,7 @@
 
         <main>
             <div class = "p__news-title"><h1>NEWS</h1></div>
-
+            <div class = "p__news__js"></div>
         </main>
 
         <footer>
@@ -82,8 +85,12 @@
             </div>
         
             <div class = "footer footer__border-top-black">
-                <div class = "footer__inner"><small class = "footer__copyright">©ProGeeC all right reserved.</div>
-
+                <div class = "footer__inner">
+                    <small class = "footer__copyright">
+                        <p>©ProGeeC all right reserved.</p>
+                        <a href = "praivacy_policy.html">プライバシーポリシー</a>
+                        <a href = "terms.html">当サービスのご利用規約</a>
+                    </div>
                 </div>
             </div>
         </footer>

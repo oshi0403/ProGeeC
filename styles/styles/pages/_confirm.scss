@@ -1,0 +1,36 @@
+$title-size: 2em;
+$text-size: 1em;
+$width-container: 1230px;
+$padding-horizontal: 15px;
+$light-gray: #d3d3d3;
+$white: #ffffff;
+$black: #000000;
+$margin-utility: 30px;
+
+
+.p__confirm__container{
+    width: $width-container;
+    padding: 0 $padding-horizontal;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.p__confirm__title{
+    max-width:100%;
+    margin-bottom: $margin-utility;
+    h2{
+        font-size:$title-size;
+    }
+    p{
+        font-size:$text-size;
+    }
+}
+.p__confirm-back__button{
+    
+    text-decoration: none;
+    color: $black;
+}
