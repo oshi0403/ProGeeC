@@ -1,0 +1,48 @@
+$light-gray: #d3d3d3;
+$white: #ffffff;
+$black: #000000;
+$padding-table: 10px;
+
+.c__confirm__table__inner{
+    width:100%;
+    table-layout: fixed;
+}
+.c__confirm__table__header{
+    padding: $padding-table;
+    border-right: 1px solid currentColor;
+    color: $black;
+    text-align: center;
+    .c__confirm__table__header:last-child{
+        border-right:0;
+    }
+}
+.c__confirm__table__body__title{
+    background-color: $light-gray;
+    font-size: 1.125rem;
+}
+.c__confirm__table__body__text{
+    font-size: 1.875rem;
+}
+.c__confirm__table__body__title{
+    padding: $padding-table;
+    border-top: 1px solid $black;
+    border-left: 1px solid $black;
+    font-weight:bold;
+    text-align: left;
+    vertical-align: center;
+}
+.c__confirm__table__body__text{
+    padding: $padding-table;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    border-left: 1px solid $black;
+    font-weight:bold;
+    text-align: left;
+    vertical-align: center;
+}
+.c__confirm__table__body__row:last-child
+.c__confirm__table__body__title,
+.c__confirm__table__body__row:last-child
+.c__confirm__table__body__text{
+    border-bottom: 1px solid $black;
+}

@@ -1,41 +1,4 @@
-<?php require_once('cmstest/wp-load.php'); ?>
-
-
-<!DOCTYPE html>
-<html lang = "ja">
-    <head>
-        <meta charset = "utf-8"/>
-        <meta name="viewport" content="width=device-width" />
-        <link href ="https://cdn.jsdelivr.net/npm/css-wipe@4.3.0/index.min.css" rel ="stylesheet"><!--リセットCSS-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/><!--矢印のためのフォントを表示するためのリンク-->
-
-        <link href = "styles/foundation/styles.min.css" rel = "stylesheet">
-        <title>News</title>
-    </head>
-    <body>
-        <header class = "header">
-            <div class = "header__inner">
-                <a href = "index.html"><img  class = "header__logo" src = "images/logo_ProGeeC_1.jpg" alt = "progeecのロゴ"></a>
-                <nav class = "header__menu">
-                    <ul>
-                        <li><a href = "about.html" class = "header__menu header__menu-about">About us</a></li>
-                        <li><a href = "company.html" class = "header__menu header__menu-company">Company</a></li>
-                        <li><a href = "service.html" class = "header__menu header__menu-service">Service</a></li>
-                        <li><a href = "news.html" class = "header__menu header__menu-news">News</a></li>
-                        <li><a href = "recruit.html" class = "header__menu header__menu-recruit">Recruit</a></li>
-                        <li><a href = "index.html#top__content-contact" class = "header__menu header__menu-contact">Contact</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-        </header>
-
-        <main>
-            <div class = "p__news-title"><h1>NEWS</h1></div>
-            <div class = "p__news__js"></div>
-        </main>
-
-        <footer>
+<footer>
             <div class ="footer">
                 <div class = "footer__inner">
                     <nav class = "footer__menu">
@@ -88,12 +51,11 @@
                 <div class = "footer__inner">
                     <small class = "footer__copyright">
                         <p>©ProGeeC all right reserved.</p>
-                        <a href = "praivacy_policy.html">プライバシーポリシー</a>
-                        <a href = "terms.html">当サービスのご利用規約</a>
+                        <a href = "<?php echo home_url(); ?>/policy">プライバシーポリシー</a>
+                        <a href = "<?php echo home_url(); ?>/terms">当サービスのご利用規約</a>
                     </div>
                 </div>
             </div>
+            <?php wp_footer(); ?>
         </footer>
-
-    </body>
-</html>
+  
