@@ -82,9 +82,12 @@
             <div class="top__content-title top__content-contact-title">
                 <h1>CONTACT</h1>
             </div>
-            <div class="component__contact__form">
+            <div class="c__form__contact">
                 <h1>お問い合わせフォーム</h1>
-                <form action="<?php echo home_url(); ?>/confirm" method="post" enctype="application/x-www-form-urlencoded">
+
+                <?php echo do_shortcode('[contact-form-7 id="123" title="お問い合わせフォーム"]'); ?>
+
+                <!-- <form action="<?php //echo home_url(); ?>/confirm" method="post" enctype="application/x-www-form-urlencoded">
                     <label for="worker">転職をお考えの方:</label>
                     <input type="radio" id="worker" name="which" value="求職者" autocomplete="off">
                     <label for="company">企業の方:</label>
@@ -99,12 +102,12 @@
                     <input type="text" id="com-name" name="com-name" autocomplete="off"><br>
                     <label for="content">お問い合わせ内容（詳細）:</label><br>
                     <textarea id="content" name="content" wrap="hard" autocomplete="off"></textarea><br>
-                    <label for="agree"><a href="<?php echo home_url(); ?>/policy">個人情報の取り扱いについて(プライバシーポリシー)</a></label><br>
+                    <label for="agree"><a href="<?php //echo home_url(); ?>/policy">個人情報の取り扱いについて(プライバシーポリシー)</a></label><br>
                     <p>同意する<input type="checkbox" id="agree" name="agree" value="同意する"></p><br>
 
                     <input type="submit" id="submit" name="submit">
 
-                </form>
+                </form> -->
 
             </div>
 
