@@ -40,6 +40,7 @@
                         <span class = "c__line-horizontal"></span>
                         <p>事業許可番号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <span class = "c__line-horizontal"></span>
+                        <p>資本金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5,000,000円</p>
                     </div>
                 </div>
             </section>

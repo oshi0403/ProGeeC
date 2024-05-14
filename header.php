@@ -19,6 +19,11 @@
         <header class = "header">
             <div class = "header__inner">
                 <a href = "<?php echo home_url(); ?>"><img  class = "header__logo" src = "<?php echo get_template_directory_uri(); ?>/assets/logo_ProGeeC_1.jpg" alt = "progeecのロゴ"></a>
+                <button class = "l__header__hamburger">
+                    <span class = "l__header__hamburger__1"></span>
+                    <span class = "l__header__hamburger__2"></span>
+                    <span class = "l__header__hamburger__3"></span>
+                </button>
                 <nav class = "header__menu">
                     <ul>
                         <li><a href = "<?php echo home_url(); ?>/about" class = "header__menu header__menu-about">About us</a></li>

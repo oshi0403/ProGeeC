@@ -1,5 +1,14 @@
 $black: #000000;
 $white: #ffffff;
+
+@media(max-width: 768px){
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+}
+}
+
 .header{
     padding-top: 20px;
     border-bottom: 1px solid $white; 
@@ -13,6 +22,23 @@ $white: #ffffff;
     display: flex;
     align-items: center; /* アイテムを垂直方向の中央に配置 */
     justify-content: space-between; /* アイテムを左右に均等に配置 */
+
+    @media(min-width: 768px){
+        .header__menu  {
+            color: $black;
+            margin-right: 20px; /* 項目間のスペース */
+            text-decoration: none;
+        }
+        
+        .header__menu-contact {
+            margin-right: 0; /* 最後の項目の右マージンをなくす */
+        }
+        .header__menu li a:hover{
+            text-decoration: underline;
+        }
+    
+    }
+    
 }
 .header__logo{
     padding-left: 15px;
@@ -24,18 +50,24 @@ $white: #ffffff;
 }
 .header__menu ul {
     display: flex;
-    list-style: none; /* リストのマーカー（点）を消す */
+    list-style: none; //リストのマーカー（点）を消す 
 }
+@media(min-width: 769px){
+    .l__header__hamburger{
+        display: none;
+    }
+}
+@media(max-width: 768px){
+    .l__header__hamburger{
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        height: 40px;
+        width: 40px;
 
-.header__menu  {
-    color: $black;
-    margin-right: 20px; /* 項目間のスペース */
-    text-decoration: none;
-}
-
-.header__menu-contact {
-    margin-right: 0; /* 最後の項目の右マージンをなくす */
-}
-.header__menu li a:hover{
-    text-decoration: underline;
+    }
 }

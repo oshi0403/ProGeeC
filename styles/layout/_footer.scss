@@ -4,6 +4,16 @@ $footer-padding-horizontal:30px;//水平方向
 $footer-menu-item-spacing: 20px;//メニューの間隔
 $footer-padding-vertical: 20px;//垂直方向
 $submenu-padding-left: 20px;//サブメニューだとわかる用の余白
+$row-gap-footer-sub:20px;
+$column-gap-footer-menu: 100px;
+
+@media(max-width: 768px){
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+}
+}
 
 .footer {
     padding-top:$footer-padding-vertical;
@@ -33,8 +43,13 @@ $submenu-padding-left: 20px;//サブメニューだとわかる用の余白
 .footer__menu-item {
     display: flex;
     flex-wrap: wrap;//要素が多い場合に折り返してくれる
-    
-    justify-content: space-between;
+    @media(max-width: 768px){
+        column-gap: $column-gap-footer-menu;
+        margin: auto;
+    }
+    @media(min-width:769px){
+        justify-content: space-between;
+    }
     color: $white;
 }
 .footer__menu-item > :last-child{
@@ -43,6 +58,10 @@ $submenu-padding-left: 20px;//サブメニューだとわかる用の余白
 .menu__item{
     font-size:1.5em;
     margin-bottom: $footer-padding-vertical;
+
+    @media(max-width: 768px){
+        flex: 1 1 30%; 
+    }
 }
 .footer__submenu{
     font-size:0.75em;
@@ -50,10 +69,22 @@ $submenu-padding-left: 20px;//サブメニューだとわかる用の余白
 }
 
 .footer__copyright {
-    display: flex;
-    justify-content: space-between; /* 水平方向の中央揃え */
     color: $white;
+
+    @media(max-width:768px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        row-gap: $row-gap-footer-sub;
+    }
+
+    @media(min-width:768px){
+    display: flex;
+    justify-content: space-between;  //水平方向の中央揃え 
     margin-right: auto;
+    }
     a{
         text-decoration: none;
         color: $white;

@@ -19,3 +19,6 @@ function create_post_type_news(){
 }
 
 // Wordpress関数では最後にadd_action関数をつけることで素の関数を有効化できる
+
+load_theme_textdomain( 'your-text-domain', get_template_directory() . '/languages' );
+//翻訳ファイルをロードするためのコード

@@ -3,10 +3,10 @@
 <main class="main">
     <section id="top__content-about">
         <div>
-            <div class="top__content-about_1">
+            <div class="top__content-about-mv">
                 <h1>プロフェッショナル</h1>
             </div>
-            <div class="top__content-about_2">
+            <div class="top__content-about-mv-sub">
                 <h1>で溢れる社会に</h1>
             </div>
         </div>
@@ -63,20 +63,7 @@
 
         </div>
     </section>
-    <section id="top__content-recruit">
-        <div>
-            <div class="top__content-title top__content-recruit-title">
-                <h1>RECRUIT</h1>
-            </div>
-            <div class="top__content-recruit-detail">
-                <h1>採用情報</h1>
-                <p>採用情報の本文採用情報の本文採用情報の本文採用情報の本文採用情報の本文採用情報の本文</p>
-                <a class="component__btn-readmore" href="<?php echo home_url(); ?>/recruit">Read More</a>
-            </div>
-
-
-        </div>
-    </section>
+    
     <section id="top__content-contact">
         <div>
             <div class="top__content-title top__content-contact-title">
