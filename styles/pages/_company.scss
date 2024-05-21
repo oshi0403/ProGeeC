@@ -18,14 +18,24 @@ $p__company-content-space: 30px;
 
 .p__company-title{
     width: 100%;
-    margin: $p__company-content-space;
+    margin-top: 100px;
     text-align: center;
     
     h1{
         font-size: $p__company-title-size;
         font-weight: bold;
+        @media(min-width: 1230px){
+            font-size: $p__company-title-size;
+        }
+        @media(max-width: 1229px) and (min-width:769px){
+            font-size: $p__company-title-size;
+        }
+        @media(max-width: 768px){
+            font-size: 2em;
+        }
     }
 }
+
 .p__company-detail{
 
     width: 100%;
@@ -36,6 +46,9 @@ $p__company-content-space: 30px;
 
     .p__company-detail-image{
         width:50%;
+        img{
+            max-width: 100%
+        }
     }
     .p__company-detail-text{
         width:50%;
@@ -53,8 +66,22 @@ $p__company-content-space: 30px;
     }
 }
 .p__company-info-content{
-    width: 840px;
-    margin: $p__company-content-space auto;
+
+    @media(min-width: 1230px){
+        width: 840px;
+        margin: $p__company-content-space auto;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        width: 840px;
+        margin: $p__company-content-space auto;
+    }
+    @media(max-width: 768px){
+        max-width: 90%;
+        margin: $p__company-content-space auto;
+    }
+    .p__company__info-title{
+        font-weight: bold;
+    }
     p{
         text-align: left;
         font-size: $p__company-text-size;
@@ -71,28 +98,28 @@ $p__company-content-space: 30px;
     margin: $p__company-content-space;
 }  
 
-.p__company-history-content{
-    width: 50%;
-    padding: $p__company-padding-vertical $p__company-padding-horizontal;
-    display: flex;
-    justify-content: space-around;
-}
-.p__company-history-year, .p__company-history-text{
+// .p__company-history-content{
+//     width: 50%;
+//     padding: $p__company-padding-vertical $p__company-padding-horizontal;
+//     display: flex;
+//     justify-content: space-around;
+// }
+// .p__company-history-year, .p__company-history-text{
 
-    display: flex;
-    flex-direction: column;//縦並び
-    align-items: center;
-    justify-content: center;
-}
+//     display: flex;
+//     flex-direction: column;//縦並び
+//     align-items: center;
+//     justify-content: center;
+// }
 
-.p__company-history-year{
+// .p__company-history-year{
     
-    font-size: $p__company-subtitle-size;
-    margin-left: $p__company-content-space;
-}  
+//     font-size: $p__company-subtitle-size;
+//     margin-left: $p__company-content-space;
+// }  
 
-.p__company-history-text{
+// .p__company-history-text{
     
-    font-size: $p__company-text-size;
-    margin-right: $p__company-content-space;
-}
+//     font-size: $p__company-text-size;
+//     margin-right: $p__company-content-space;
+// }

@@ -9,10 +9,26 @@ $content-text-size: 18px;
 $margin-content-text: 1em;
 $font-weight__text: 700px;
 
+*{
+    line-height: 1.75em;
+}
+
 .main{
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    @media(min-width: 1230px){
+        max-width: 1230px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media(max-width: 768px){
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,35 +36,68 @@ $font-weight__text: 700px;
     max-width: 100%;
     text-align: center;
     margin: $margin-content-text 0 $margin-content-text 0;
+    margin-top:100px;
 
     h1{
         font-size: $content-mv-size;
         font-weight: bold;
         padding: $about-padding-horizontal $about-padding-vertical;
+        
     }
 }
+
 .about-mission__contents{
+
     background-color: $white;
     text-align: center;
-    padding: $about-padding-horizontal $about-padding-vertical;
-    padding: 0 20% 0 20%;
+
+    @media(min-width: 1230px){
+        padding: 0 20% 0 20%;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        padding: 0 10% 0 10%;
+    }
+    @media(max-width: 768px){
+        padding: 0 $about-padding-horizontal 0 $about-padding-horizontal;
+    }
 
     h2{
-         font-size: $content-content-h2-size;
-         font-weight: bold;
-         margin: $margin-content-text 0 $margin-content-text 0;
+        font-weight: bold;
+        @media(min-width: 1230px){
+            font-size: $content-content-h2-size;
+            margin-bottom: $margin-content-text;
+        }
+        @media(max-width: 1229px) and (min-width:769px){
+            font-size: $content-content-h2-size;
+            margin-bottom: $margin-content-text;
+        }
+        @media(max-width: 768px){
+            font-size: ($content-content-h2-size)/2;
+            margin-bottom: $margin-content-text;
+        }
     }
     p{
         
-        font-size: $content-text-size;
         font-weight:$font-weight__text;
         margin: $margin-content-text 0 $margin-content-text 0;
+        @media(min-width: 1230px){
+            font-size: $content-text-size;
+            margin-bottom: $margin-content-text;
+        }
+        @media(max-width: 1229px) and (min-width:769px){
+            font-size: $content-content-h2-size;
+            margin-bottom: $margin-content-text;
+        }
+        @media(max-width: 768px){
+            font-size: 1em;
+            margin-bottom: $margin-content-text;
+        }
     }
 }
 .about-vision{
     background-color: $black;
     padding: $about-padding-vertical 0 $about-padding-vertical 0;
-   
+
 }
 .about-vision__mv{
     color: $white;
@@ -61,9 +110,9 @@ $font-weight__text: 700px;
 
     h2{
         font-size: $content-content-h2-size;
-         font-weight: bold;
-         margin: $margin-content-text 0 $margin-content-text 0;
-         color: $white;
+        font-weight: bold;
+        margin: $margin-content-text 0 $margin-content-text 0;
+        color: $white;
     }
     p{
         font-size: $content-text-size;
@@ -82,7 +131,7 @@ $font-weight__text: 700px;
     .about-value__content__item{
         
         text-align: center;
-        width: 840px;
+        max-width: 100%;
         padding: $about-padding-vertical $about-padding-horizontal;
     }
     .about-value__content__title{

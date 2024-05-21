@@ -1,41 +1,159 @@
 $black: #000000;
 $white: #ffffff;
+
+$hamburger-space: 6px;
+$header-opacity: 80%;
+$header__z-index: 5;
+$ham-translate: 16px;
+
 .header{
-    padding-top: 20px;
+
     border-bottom: 1px solid $white; 
+    
+    // position: fixed;
+    // z-index: $header__z-index;
+    // top:20px;
+    // left:15px;
 }
 .header__inner{
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center; /* アイテムを垂直方向の中央に配置 */
     justify-content: space-between; /* アイテムを左右に均等に配置 */
-}
-.header__logo{
     padding-left: 15px;
     padding-right: 15px;
-    height: 100px; 
-    width: auto; 
-    margin-left: 0;
+
+
+    @media(min-width: 1230px){
+        width: 1230px;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        width: 100%;
+    }
+    @media(max-width: 768px){
+        width: 100%;
+    }
+    .header__menu  {
+        color: $black;
+        margin-right: 20px; /* 項目間のスペース */
+        text-decoration: none;
+    }
+    .header__menu-contact {
+        margin-right: 0; /* 最後の項目の右マージンをなくす */
+    }  
+    .header__menu li a:hover{
+        text-decoration: underline;
+    }   
+
+    position: fixed;//浮かせるためのコード
+    z-index: 100;
+    left:15px;
+    opacity: $header-opacity;
+
+    &.open{
+        background-color: $black;
+        opacity: 100%;
+    }
+    .header__logo{
+
+        height: 100px; 
+        width: auto; 
+        margin-left: 0;
+        
+    }
+    .header__menu ul {
+        @media(min-width: 1230px){
+            display: flex;
+            list-style: none; //リストのマーカー（点）を消す
+            
+        }
+        @media(max-width: 1229px){
+            visibility: hidden;
+        }   
+    }
+}
+// .header__inner.open{
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+
     
-}
-.header__menu ul {
-    display: flex;
-    list-style: none; /* リストのマーカー（点）を消す */
-}
 
-.header__menu  {
-    color: $black;
-    margin-right: 20px; /* 項目間のスペース */
-    text-decoration: none;
-}
+//     @media(min-width: 1230px){
+//         max-width: 1230px;
+//     }
+//     @media(max-width: 1229px) and (min-width:769px){
+//         max-width: 100%;
+//     }
+//     @media(max-width: 768px){
+//         max-width: 100%;
+//     }
+// }
 
-.header__menu-contact {
-    margin-right: 0; /* 最後の項目の右マージンをなくす */
+.l__header__hamburger{
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px 0;
+        height: 70px;
+        width: 70px;
+        position: fixed;
+        top: 10px;
+        right: 15px;
+
+        @media(min-width: 1230px){
+            display: none;
+        }
+
+        &.open{
+            
+            .l__header__hamburger__1{
+                transform:translateY($ham-translate) rotate(315deg);
+                transition: transform 1.0s ease-in-out;
+                background-color: $white;
+            }
+            .l__header__hamburger__2{
+                opacity: 0;
+            }
+            .l__header__hamburger__3{
+                transform:translateY(-($ham-translate)) rotate(-315deg);
+                transition: transform 1.0s ease-in-out;
+                background-color: $white;
+            }
+        }
+        &.close{
+            
+            .l__header__hamburger__1{
+                transform: translateY(0) rotate(0);
+                transition: transform 1.0s ease-in-out;
+                background-color: $black;
+            }
+            .l__header__hamburger__2{
+                opacity: 100;
+            }
+            .l__header__hamburger__3{
+                transform: translateY(0) rotate(0);
+                transition: transform 1.0s ease-in-out;
+                background-color: $black;
+            }
+        }
+
 }
-.header__menu li a:hover{
-    text-decoration: underline;
+.l__header__hamburger span{
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: $black;
+        border-radius: 3px;
+}
+.l__header__hamburger__1{
+        margin-bottom: $hamburger-space;
+}
+.l__header__hamburger__2{
+        margin-bottom: $hamburger-space;
 }

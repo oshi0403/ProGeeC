@@ -6,11 +6,13 @@ $component-text-size: 1em;
 $form-margin-bottom: 30px;
 $padding-horizontal:15px;
 $padding-vertical: 15px;
+$line-height-form: 1.75em;
 
-.component__contact__form{
+.c__form__contact{
 
     margin-bottom: $form-margin-bottom;
     padding: $padding-vertical $padding-horizontal;
+    line-height: $line-height-form;
 
     h1{
         font-size: $component-title-size;
@@ -21,13 +23,14 @@ $padding-vertical: 15px;
         font-size: $component-text-size;
         text-align: left;
         margin-bottom: $form-margin-bottom/2;
+        line-height: $line-height-form;
 
     }
     input{
-        text-align: left;
-       
+        text-align: left;   
     }
-    input#name,input#email,input#tel,input#com-name{
+
+    input#user_name,input#email,input#tel,input#com-name,#confirm{
         
         width: 100%;
         height: $component-title-size;
@@ -41,7 +44,7 @@ $padding-vertical: 15px;
         
     }
     a{
-        text-decoration: none;
+        text-decoration: underline;
         color: $black;
     }
     a:hover{

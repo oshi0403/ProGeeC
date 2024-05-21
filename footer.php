@@ -30,14 +30,10 @@
                                 </li>
                                 <li class = "menu__item footer__menu-item-news"><h2>News</h2></li>
                                 <li class = "menu__item footer__menu-item-recruit">
-                                    <h2>Recruit</h2>
-                                    <ul class = "footer__submenu">
-                                        <li><h4 class = "footer__submenu-item">採用情報</h4></li>
-                                    </ul>
-                                </li>
+
                                 <li class = "menu__item footer__menu-item-contact">
                                     <h2>Contact</h2>
-                                    <ul class = "footer_submenu">
+                                    <ul class = "footer__submenu">
                                         <li><h4 class = "footer__submenu-item">お問い合わせ</h4></li>
                                     </ul>
                                 </li>
