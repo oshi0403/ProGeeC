@@ -1,73 +1,181 @@
 $black: #000000;
 $white: #ffffff;
 
-@media(max-width: 768px){
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-}
+$padding-def: 15px;
+$margin-def: 20px;
+$hamburger-space: 6px;
+$padding-ham: 5px;
+$header-opacity: 80%;
+$header__z-index: 5;
+$ham-translate: 16px;
+$width-difference: 20px;
+$ham-side: 70px;
+$ham-position: 30px;
+$logo-size: 100px;
+$menu-large: 4em;
+$menu-mini: 2em;
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 .header{
-    padding-top: 20px;
-    border-bottom: 1px solid $white; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    text-align: center; /* 子要素を中央揃えにする */
+
+    @media(min-width: 1230px){
+        width: 100%;
+        padding: $padding-def*2;
+    }
+    @media(max-width: 1229px){
+        width: 100%;
+        padding: $padding-def;
+    }
+
 }
 .header__inner{
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    align-items: center; /* アイテムを垂直方向の中央に配置 */
-    justify-content: space-between; /* アイテムを左右に均等に配置 */
+    a{
+        display: block;
+        height: $logo-size;
+        width: $logo-size;
+        .header__logo{
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
+    &.open{
+        background-color: $black;
 
-    @media(min-width: 768px){
-        .header__menu  {
-            color: $black;
-            margin-right: 20px; /* 項目間のスペース */
-            text-decoration: none;
-        }
+            
         
-        .header__menu-contact {
-            margin-right: 0; /* 最後の項目の右マージンをなくす */
-        }
-        .header__menu li a:hover{
-            text-decoration: underline;
-        }
-    
-    }
-    
-}
-.header__logo{
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 100px; 
-    width: auto; 
-    margin-left: 0;
-    
-}
-.header__menu ul {
-    display: flex;
-    list-style: none; //リストのマーカー（点）を消す 
-}
-@media(min-width: 769px){
-    .l__header__hamburger{
-        display: none;
     }
 }
-@media(max-width: 768px){
-    .l__header__hamburger{
+.header__menu{
+    display: none;
+
+    &.open{
+            display: block;
+            
+            position: fixed;
+            z-index: 100;
+            background-color: $black;
+            @media (min-width: 1230px) {
+                width: calc(100% - $padding-def*4);
+                top: 130px;
+                padding-left: $padding-def*2;
+                padding-right: $padding-def*2;
+            }
+            @media(max-width: 1229px){
+                width: calc(100% - $padding-def*2);
+                padding-left: $padding-def;
+                padding-right: $padding-def;
+            }
+            ul{
+                width: 100%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+
+            a{
+                width: 100%;
+                color: $white;
+                font-weight: bold;
+                text-decoration: none;
+
+                @media (min-width: 1230px) {
+                    margin-bottom: $margin-def;
+                    font-size: $menu-large;
+
+                }
+                @media(max-width: 1229px){
+                    margin-bottom: calc(($margin-def)/2);
+                    font-size: $menu-mini;
+
+                }
+            }
+            
+        }
+    }
+
+
+.l__header__hamburger{
         background: none;
         border: none;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 15px;
-        height: 40px;
-        width: 40px;
+        padding: 15px 1%;
+        height: $ham-side;
+        width: $ham-side;
+        position: fixed;
+        top: $ham-position;
+        right: $ham-position;
+        z-index: 100;
 
-    }
+        border: 1px solid $black;
+        background-color: $white;
+
+        &.open{
+            background-color: $black;
+            .l__header__hamburger__1{
+                transform:translateY($ham-translate) rotate(315deg);
+                transition: transform 1.0s ease-in-out;
+                background-color: $white;
+            }
+            .l__header__hamburger__2{
+                opacity: 0;
+            }
+            .l__header__hamburger__3{
+                transform:translateY(-($ham-translate)) rotate(-315deg);
+                transition: transform 1.0s ease-in-out;
+                background-color: $white;
+            }
+        }
+        &.close{
+            
+            .l__header__hamburger__1{
+                transform: translateY(0) rotate(0);
+                transition: transform 1.0s ease-in-out;
+                background-color: $black;
+            }
+            .l__header__hamburger__2{
+                opacity: 100;
+                transition: transform 1.0s ease-in-out;
+            }
+            .l__header__hamburger__3{
+                transform: translateY(0) rotate(0);
+                transition: transform 1.0s ease-in-out;
+                background-color: $black;
+            }
+        }
+
 }
+.l__header__hamburger span{
+        display: block;
+        height: 2px;
+        width: 90%;
+        background-color: $black;
+        border-radius: 3px;
+}
+.l__header__hamburger__1{
+        margin-bottom: $hamburger-space;
+        
+}
+.l__header__hamburger__2{
+        margin-bottom: $hamburger-space;
+        
+}
+

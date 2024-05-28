@@ -1,11 +1,12 @@
 $black: #000000;
 $white: #ffffff;
 $p__company-padding-vertical: 30px;
-$p__company-padding-horizontal: 30px;
+$p__company-padding-horizontal: 20px;
 $p__company-title-size: 3em;
 $p__company-subtitle-size: 2em;
+$p__company-text-size-large: 1.5em;
 $p__company-text-size: 1em;
-$p__company-content-space: 30px;
+$p__company-content-space: 60px;
 
 .p__company-greeting{
     display: flex;
@@ -13,48 +14,114 @@ $p__company-content-space: 30px;
     align-items: center;
     justify-content: center;
     padding: $p__company-padding-vertical $p__company-padding-horizontal;
-    margin: $p__company-content-space;
 }
 
 .p__company-title{
     width: 100%;
-    margin: $p__company-content-space;
+    margin-top: 100px;
+    margin-bottom: $p__company-content-space;
     text-align: center;
     
     h1{
         font-size: $p__company-title-size;
         font-weight: bold;
+        @media(min-width: 1230px){
+            font-size: $p__company-title-size;
+            margin-bottom: $p__company-content-space*2
+        }
+        @media(max-width: 1229px) and (min-width:769px){
+            font-size: $p__company-title-size;
+            margin-bottom: $p__company-content-space;
+        }
+        @media(max-width: 768px){
+            font-size: 2em;
+            margin-bottom: $p__company-content-space;
+        }
     }
 }
+
 .p__company-detail{
 
     width: 100%;
-    margin: $p__company-content-space;
+    margin-bottom: $p__company-content-space;
 
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1229px){
+        display: block;
+        
+    }
 
     .p__company-detail-image{
-        width:50%;
+        width:45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            max-width: 70%;
+            justify-content: center;
+        }
+        p{
+            text-align: center;
+            font-size: $p__company-text-size-large;
+            @media(max-width: 1229px){
+                font-size: $p__company-text-size;
+            }
+        }
+        @media(max-width: 1229px){
+            width: 100%;
+            margin-bottom: $p__company-content-space;
+
+        }
     }
     .p__company-detail-text{
-        width:50%;
+        width:55%;
+        padding: 0 $p__company-padding-horizontal;
         display: flex;
         flex-direction: column;//縦並び
         align-items: center;
         justify-content: center;
+        @media(max-width: 1229px){
+            width: 100%;
+            padding: 0;
 
+        }
         h2{
             font-size: $p__company-subtitle-size;
+            font-weight: bold;
+            margin-bottom: $p__company-content-space;
+            @media(max-width: 1229px){
+                font-size: $p__company-subtitle-size;
+                font-weight: bold;
+            }
         }
         p{
             font-size: $p__company-text-size;
+            @media(max-width: 1229px){
+                font-size: $p__company-text-size;
+                padding: 0 $p__company-padding-horizontal
+            }
         }       
     }
 }
 .p__company-info-content{
-    width: 840px;
-    margin: $p__company-content-space auto;
+
+    @media(min-width: 1230px){
+        width: 840px;
+        margin: $p__company-content-space auto;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        width: 840px;
+        margin: $p__company-content-space auto;
+    }
+    @media(max-width: 768px){
+        max-width: 90%;
+        margin: $p__company-content-space auto;
+    }
+    .p__company__info-title{
+        font-weight: bold;
+    }
     p{
         text-align: left;
         font-size: $p__company-text-size;
@@ -71,28 +138,28 @@ $p__company-content-space: 30px;
     margin: $p__company-content-space;
 }  
 
-.p__company-history-content{
-    width: 50%;
-    padding: $p__company-padding-vertical $p__company-padding-horizontal;
-    display: flex;
-    justify-content: space-around;
-}
-.p__company-history-year, .p__company-history-text{
+// .p__company-history-content{
+//     width: 50%;
+//     padding: $p__company-padding-vertical $p__company-padding-horizontal;
+//     display: flex;
+//     justify-content: space-around;
+// }
+// .p__company-history-year, .p__company-history-text{
 
-    display: flex;
-    flex-direction: column;//縦並び
-    align-items: center;
-    justify-content: center;
-}
+//     display: flex;
+//     flex-direction: column;//縦並び
+//     align-items: center;
+//     justify-content: center;
+// }
 
-.p__company-history-year{
+// .p__company-history-year{
     
-    font-size: $p__company-subtitle-size;
-    margin-left: $p__company-content-space;
-}  
+//     font-size: $p__company-subtitle-size;
+//     margin-left: $p__company-content-space;
+// }  
 
-.p__company-history-text{
+// .p__company-history-text{
     
-    font-size: $p__company-text-size;
-    margin-right: $p__company-content-space;
-}
+//     font-size: $p__company-text-size;
+//     margin-right: $p__company-content-space;
+// }

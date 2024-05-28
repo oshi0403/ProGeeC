@@ -7,13 +7,7 @@ $submenu-padding-left: 20px;//サブメニューだとわかる用の余白
 $row-gap-footer-sub:20px;
 $column-gap-footer-menu: 100px;
 
-@media(max-width: 768px){
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-}
-}
+
 
 .footer {
     padding-top:$footer-padding-vertical;
@@ -30,10 +24,20 @@ $column-gap-footer-menu: 100px;
 }
 
 .footer__inner {
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    @media(min-width: 1230px){
+        max-width: 1230px;
+
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        max-width: 100%;
+
+    }
+    @media(max-width: 768px){
+        max-width: 100%;
+
+    }
     margin: 0 auto;
+
 }
 
 .footer__menu{
@@ -43,6 +47,7 @@ $column-gap-footer-menu: 100px;
 .footer__menu-item {
     display: flex;
     flex-wrap: wrap;//要素が多い場合に折り返してくれる
+    overflow: hidden;
     @media(max-width: 768px){
         column-gap: $column-gap-footer-menu;
         margin: auto;
@@ -64,8 +69,20 @@ $column-gap-footer-menu: 100px;
     }
 }
 .footer__submenu{
-    font-size:0.75em;
-    margin: 2px 0;
+
+    h4{
+        font-size:0.75em;
+        margin: 2px 0;
+        line-height: 1.5em;
+
+        ::before{
+            content:'・';
+        }
+    }
+    h4::before{
+        content:'・';
+    }
+
 }
 
 .footer__copyright {

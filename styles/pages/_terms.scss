@@ -4,66 +4,78 @@ $mv-size: 6em;
 $item-title-size: 2em;
 $item-subtitle-size: 1.5em;
 $item-content-size: 1em;
-$margin-horizontal:6em;
+$margin-horizontal: 6em;
 $margin-vertical: 2em;
 
-
-.p__terms__mv{
+.p__terms__mv {
     margin: $margin-vertical $margin-horizontal;
-    h1{
-        font-size:$mv-size;
+    h1 {
+        font-size: $mv-size;
         font-weight: bold;
         max-width: 100%;
     }
 }
-.p__terms__area{
 
-    display:flex;
+.p__terms__area {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
 }
-.p__terms__prologue{
-    margin: $margin-vertical*2 $margin-horizontal*2;
+
+.p__terms__prologue {
+    margin: $margin-vertical * 2 $margin-horizontal * 2;
     font-size: $item-content-size;
+    line-height: 1.75em;
 }
-.p__terms__list{
 
+ol{
+    margin-left:1.25em;
+    padding-left: 1.25em;
+}
+
+.p__terms__list {
     text-align: left;
     margin: $margin-vertical $margin-horizontal;
     padding: 0 15px;
-    h1{
+    h2 {
         font-size: $item-title-size;
+        font-weight: bold;
     }
 }
-.p__terms__list-son{
-    h2{
-        font-size: $item-subtitle-size;
-    }
-}
-.p__terms__list p, .p__terms__list-son p, .p__terms__list-gson p{
+
+.p__terms__list p,
+.p__terms__list-son p,
+.p__terms__list-son__item p {
     margin-bottom: $margin-vertical;
     font-size: $item-content-size;
     padding-left: $item-content-size;
 }
-.p__terms__list p, .p__terms__list-son p, .p__terms__list-gson p > *:first-child{
+
+.p__terms__list p,
+.p__terms__list-son p,
+.p__terms__list-son__item p > *:first-child {
     margin-top: $margin-vertical;
+    line-height: 1.75em;
+    
 }
-//オーダーリストに数字をつける
-.p__terms__list-gson{
-    counter-reset: p__terms__list-gson;
+
+// オーダーリストに数字をつける
+.p__terms__list-son {
+    counter-reset: p__terms__list-son;
 }
-.p__terms__list-gson__item{
+
+.p__terms__list-son__item {
     position: relative;
     padding-left: $item-content-size;
 }
-.p__terms__list-gson__item::before{
-    content:'\00a0'counter(p__terms__list-gson)'.';
+
+.p__terms__list-son__item::before {
+    content: '\00a0' counter(p__terms__list-son) '.';
     position: absolute;
+    line-height: 1.75em;
     top: 0;
     left: 0;
     color: $black;
-    counter-increment: p__terms__list-gson;
+    counter-increment: p__terms__list-son;
 }
-

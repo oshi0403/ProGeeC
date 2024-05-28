@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-
+<body>
 <main class="main">
     <section id="top__content-about">
-        <div>
-            <div class="top__content-about-mv">
+        <div class = "top__content-about-mv">
+            <div class="top__content-about-mv-1">
                 <h1>プロフェッショナル</h1>
             </div>
-            <div class="top__content-about-mv-sub">
+            <div class="top__content-about-mv-2">
                 <h1>で溢れる社会に</h1>
             </div>
         </div>
@@ -18,16 +18,15 @@
             </div>
             <div class="top__content-company-detail">
                 <div class="top__content-company-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_ProGeeC_1.jpg" alt="イメージ画像"></src>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/progeec_top.png" alt="人が話してるみたいな写真"></src>
 
                 </div>
                 <div class="top__content-company-text">
-                    <h1>～代表挨拶～</h1>
-                    <p>代表挨拶の一部代表挨拶の一部代表挨拶の一部代表挨拶の一部代表挨拶の一部代表挨拶の一部代表挨拶の一部代表挨拶の一部</p>
+                    <h1>企業・人へ「100%を超える101％の価値、1%の感動」を届ける最高のフィクサーを目指します</h1>
+                    <p></p>
                     <a class="component__btn-readmore" href="<?php echo home_url(); ?>/company">Read More</a>
 
                 </div>
-
 
             </div>
 
@@ -40,12 +39,12 @@
             </div>
             <div class="top__content-service-detail">
                 <div class="top__content-service-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_ProGeeC_1.jpg" alt="イメージ画像"></src>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/progeec_business.png" alt="事業のイメージ画像or幾何学的な画像"></src>
                 </div>
 
                 <div class="top__content-service-text">
                     <h1>キャッチコピー</h1>
-                    <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p>
+                    <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p>
                     <a class="component__btn-readmore" href="<?php echo home_url(); ?>/service">Read More</a>
                 </div>
 
@@ -103,5 +102,5 @@
     </section>
 </main>
 <!-- <a href = "?php echo home_url(); ?/policy">はホーム画面のurlに/policyを足すっていう意味 -->
-
+</body>
 <?php get_footer(); ?>

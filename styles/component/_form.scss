@@ -2,25 +2,33 @@ $black: #000000;
 $white: #ffffff;
 $dark-gray: #a9a9a9;
 $component-title-size: 3em;
+$component-title-size-mini: 2em;
 $component-text-size: 1em;
 $form-margin-bottom: 30px;
 $padding-horizontal:15px;
 $padding-vertical: 15px;
+$line-height-form: 1.75em;
 
 .c__form__contact{
 
     margin-bottom: $form-margin-bottom;
     padding: $padding-vertical $padding-horizontal;
+    line-height: $line-height-form;
 
     h1{
         font-size: $component-title-size;
         text-align: center;
         margin-bottom: $form-margin-bottom;
+        @media (max-width: 768px) {
+            font-size: $component-title-size-mini;
+    
+        }
     }
     label {
         font-size: $component-text-size;
         text-align: left;
         margin-bottom: $form-margin-bottom/2;
+        line-height: $line-height-form;
 
     }
     input{

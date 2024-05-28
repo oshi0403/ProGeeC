@@ -22,3 +22,18 @@ function create_post_type_news(){
 
 load_theme_textdomain( 'your-text-domain', get_template_directory() . '/languages' );
 //翻訳ファイルをロードするためのコード
+
+function enqueue_custom_scripts() {
+    // JavaScriptファイルを登録してキューに追加
+    wp_enqueue_script('hamburger-script', get_template_directory_uri() . '/scripts/hamburger.js', array(), null, true);
+
+    // JavaScriptファイルに渡すデータを用意
+    $script_data = array(
+        'originalSrc' => get_template_directory_uri() . '/assets/logo_ProGeeC_1.jpg',
+        'newSrc' => get_template_directory_uri() . '/assets/logo_ProGeeC_re.jpg'
+    );
+
+    // wp_localize_script を使用してデータを渡す
+    wp_localize_script('hamburger-script', 'logoData', $script_data);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');

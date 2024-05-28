@@ -1,0 +1,8 @@
+@function judge-color($background-color){
+    @if $background-color =="$black"{
+        @return $white;
+    }
+    @else {
+        @return $black;
+    }
+}

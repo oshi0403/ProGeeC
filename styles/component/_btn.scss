@@ -36,6 +36,9 @@ $margin-btn-policy: 60px;
         content:'\f061';//右矢印の番号
         position: absolute;
         padding: $padding-vertical $padding-horizontal;
+        @media (max-width: 1229px) {
+            padding: 0 0 0 10px; /* 順番は 上 右 下 左 */
+        }
         top: 50%;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;

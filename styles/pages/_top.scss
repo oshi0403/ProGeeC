@@ -3,78 +3,96 @@ $white: #ffffff;
 $top-padding-horizontal:30px;
 $top-padding-vertical:20px;
 $content-about-size: 6em;
+$content-about-size-mini: 2.25em;
 $content-title-size:3em;
-$content-catchcopy-size: 2em;
+$content-catchcopy-size: 1.5em;
+$content-catchcopy-size-mini: 1em;
 $content-text-size: 1em;
 $margin-content-text: 30px;
 $line-height: 1.75;
-
-/* 全ての要素と疑似要素に box-sizing: border-box を適用 */
-@media(max-width: 768px){
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-}
-}
+$mv-padding-hol: 15px;
+$mv-padding-ver: 300px;
 
 
 
 .main{
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    @media(min-width: 1230px){
+        max-width: 1230px;
+
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        max-width: 100%;
+
+    }
+    @media(max-width: 768px){
+        max-width: 100%;
+
+    }
     margin-left: auto;
     margin-right: auto;
+    margin-top: 130px;
 }
 
-#top__content-about{
-    margin: 300px 10%;
+.top__content-about-mv{
+    @media(min-width: 1230px){
+        max-width: 100%;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        max-width: 100%;
+    }
+    @media(max-width: 768px){
+        max-width: 100%;
+    }
+    margin-top: 130px;
+    padding: $mv-padding-ver 0;
+    background-color: $black;
+}
+.top__content-about-mv-1 {
+    background-color: $white;
+    padding: $top-padding-horizontal;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    @media (min-width: 769px) {
+        padding: $top-padding-horizontal;
+
+    }
+    @media (max-width: 768px) {
+        padding: calc(($top-padding-horizontal)/2);
+        }
+    h1{
+        color: $black;
+        max-width: 100%;
+        font-weight: bold;
+        @media (min-width: 769px) {
+            font-size: $content-about-size;
+
+        }
+        @media (max-width: 768px) {
+            font-size: $content-about-size-mini;
+            }
+    }
 }
 
-.top__content-about-mv {
+
+.top__content-about-mv-2 {
     background-color: $black;
     padding: $top-padding-horizontal;
     display: flex;
     justify-content: center;
     max-width: 100%;
 
-    @media (min-width: 769px) {
-        h1 {
-            color: $white;
+    h1{
+        color: $white;
+        max-width: 100%;
+        font-weight: bold;
+        @media (min-width: 769px) {
             font-size: $content-about-size;
-            max-width: 100%;
-        }
-    }
 
-    @media (max-width: 768px) {
-        h1 {
-            color: $white;
-            font-size: $content-title-size;
-            max-width: 100%;
         }
-    }
-}
-
-.top__content-about-mv-sub {
-    background-color: $white;
-    padding: $top-padding-horizontal;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-
-    @media (min-width: 769px) {
-        h1 {
-            color: $black;
-            font-size: $content-about-size;
-        }
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            color: $black;
-            font-size: $content-title-size;
-        }
+        @media (max-width: 768px) {
+            font-size: $content-about-size-mini;
+            }
     }
 }
 
@@ -84,7 +102,8 @@ $line-height: 1.75;
     padding: $top-padding-vertical*2 $top-padding-horizontal*2;
 
     h1{
-        font-size: $content-title-size;//個別にh1などをネストして書くことができる
+        font-size: $content-title-size;
+        font-weight: 900;//個別にh1などをネストして書くことができる
     }
 }
 .top__content-company-detail, .top__content-service-detail {
@@ -94,18 +113,32 @@ $line-height: 1.75;
 
 }
 .top__content-company-image, .top__content-service-image {
-    width: 50%;
+    width: 40%;
     align-items: center;
     padding: $top-padding-vertical $top-padding-horizontal;
+    @media(max-width: 768px){
+        padding: $top-padding-vertical 0;
+    }
+    img {
+        max-width:100%;
+        
+    }
 }
 .top__content-company-text, .top__content-service-text{
-    width: 50%;
+    width: 60%;
     text-align: center;
+    align-content: center;
     padding: $top-padding-vertical $top-padding-horizontal;
     line-height:$line-height;
 
     h1{
+        font-weight: 900;
         font-size: $content-catchcopy-size;
+        
+        @media(max-width: 768px){
+            font-size: $content-catchcopy-size-mini;
+        }
+        
         margin-bottom: $margin-content-text;
     }
     p{
