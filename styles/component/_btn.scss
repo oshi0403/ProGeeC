@@ -4,10 +4,15 @@ $padding-horizontal:30px;
 $padding-vertical:20px;
 $readmore-text-size :1em;
 $policy-text-size: 3em;
+$policy-text-size-mini: 1.5em;
+$send-text-size: 1.5em;
 $width-btn-readmore: 200px;
+$width-btn-send: 300px;
 $width-btn-policy: 640px;
+$width-btn-policy-mini: 320px;
 $transition-btn: .25s;
 $margin-btn-policy: 60px;
+$padding-def: 15px;
 
 .component__btn-readmore{
     display: inline-block;
@@ -45,25 +50,38 @@ $margin-btn-policy: 60px;
         transform: translateY(-50%);
     }
 }
+
 .c__btn-policy{
     display: inline-block;
+    @media(min-width: 1230px){
+        width: $width-btn-policy;
+        padding: $padding-vertical $padding-horizontal;
+        font-size: $policy-text-size;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        width: $width-btn-policy-mini;
+        font-size: $policy-text-size-mini;
+    }
+    @media(max-width: 768px){
+        width: $width-btn-policy-mini;
+        font-size: $policy-text-size-mini;
+        padding:$padding-def; 
+
+    }
     width: $width-btn-policy;
     max-width: 100%;//画面の横幅が＄width-btn以下になった時に画面外にボタンがはみ出るのを防ぐ
-    padding: $padding-vertical $padding-horizontal;
+    
     margin-bottom: $margin-btn-policy ;
     background-color: $black;
     border: 2px solid transparent;
     color: $white;
-    font-size: $policy-text-size;
-    text-align: center;
+    
+    vertical-align: middle;
     text-decoration: none;
     transition: $transition-btn;
     //以下は矢印のためのスタイリング
-    position:relative;
-    padding-left: $readmore-text-size;
-    padding-right: $readmore-text-size;
-    margin-right: $policy-text-size;
-    margin-left: $policy-text-size;
+    // position:relative;
+
 
     &:hover{ //同じ要素について疑似要素を実装するときにはネストする際＆が必須！
         background-color: $white;
@@ -71,14 +89,54 @@ $margin-btn-policy: 60px;
         
         color: $black;
     }
-    &::after{
-        content:'\f061';//右矢印の番号
-        position: absolute;
-        padding: $padding-vertical $padding-horizontal;
-        top: 50%;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        transform: translateY(-50%);
+    // &::after{
+    //     content:'\f061';//右矢印の番号
+    //     position: absolute;
+    //     padding: $padding-vertical $padding-horizontal;
+    //     top: 50%;
+    //     font-family: "Font Awesome 5 Free";
+    //     font-weight: 900;
+    //     transform: translateY(-50%);
+    // }
+
+}
+.c__form__submit{
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: inline-block;
+    @media(min-width: 1230px){
+        width:$width-btn-send;
+        font-size: $send-text-size;
+    }
+    @media(min-width: 769px) and (max-width: 1229px){
+        width:$width-btn-send;
+    }
+    @media(max-width: 768px){
+        width:$width-btn-send;
+    }
+    
+    max-width: 100%;//画面の横幅が＄width-btn以下になった時に画面外にボタンがはみ出るのを防ぐ
+    padding: $padding-vertical $padding-horizontal;
+    margin-bottom: $margin-btn-policy ;
+    background-color: $black;
+    border: 2px solid transparent;
+    color: $white;
+    input{
+        text-align: center;
+    }
+    
+    transition: $transition-btn;
+    
+    &:hover{ //同じ要素について疑似要素を実装するときにはネストする際＆が必須！
+        background-color: $white;
+        border-color: currentColor;
+        color: $black;
     }
 
+}
+span.wpcf7-spinner {
+    display: none;
 }

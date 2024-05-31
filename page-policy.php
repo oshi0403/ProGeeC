@@ -8,7 +8,7 @@
 
 <main>
                 <div class = "p__policy__mv">
-                    <h1>PRIVACY POLICY</h1>
+                    <h1>PRIVACY <br class = "p__policy-br">POLICY</h1>
                     <div class = "p__policy__mv-sub">
                         
                         <h2>プライバシーポリシー</h2>

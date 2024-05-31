@@ -2,10 +2,15 @@ $light-gray: #d3d3d3;
 $white: #ffffff;
 $black: #000000;
 $padding-table: 10px;
-
+$margin-def: 60px;
+.c__confirm__table{
+    width: 100%;
+    overflow-x: scroll;
+}
 .c__confirm__table__inner{
-    width:100%;
+    width:1200px;
     table-layout: fixed;
+    margin-bottom: $margin-def;
 }
 .c__confirm__table__header{
     padding: $padding-table;
@@ -36,7 +41,6 @@ $padding-table: 10px;
     border-top: 1px solid $black;
     border-right: 1px solid $black;
     border-left: 1px solid $black;
-    font-weight:bold;
     text-align: left;
     vertical-align: center;
 }

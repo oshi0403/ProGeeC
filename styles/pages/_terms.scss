@@ -1,18 +1,32 @@
 $black: #000000;
 $white: #ffffff;
+$dark-gray: #a9a9a9;
 $mv-size: 6em;
+$mv-size-mini: 3em;
 $item-title-size: 2em;
+$item-title-size-mini: 1.5em;
 $item-subtitle-size: 1.5em;
 $item-content-size: 1em;
 $margin-horizontal: 6em;
-$margin-vertical: 2em;
+$margin-vertical: 130px;
+$padding-def: 15px;
+$margin-def: 60px;
 
 .p__terms__mv {
-    margin: $margin-vertical $margin-horizontal;
+    margin-top: $margin-vertical ;
+    margin-right:auto;
+    margin-left: auto;
+    padding: $padding-def*2;
     h1 {
         font-size: $mv-size;
         font-weight: bold;
         max-width: 100%;
+    }
+    @media(max-width: 768px){
+        padding: $padding-def;
+        h1{
+            font-size: $mv-size-mini;
+        }
     }
 }
 
@@ -21,10 +35,41 @@ $margin-vertical: 2em;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media(min-width: 1230px){
+        padding-right: $padding-def*10;
+        padding-left: $padding-def*10;
+    }
+    @media(min-width: 769px) and (max-width: 1229px){
+        padding-right: $padding-def*2;
+        padding-left: $padding-def*2;
+    }
+    @media(max-width: 768px){
+        padding-right: $padding-def;
+        padding-left: $padding-def;
+    }
+    margin-bottom: $margin-def;
 }
 
+.p__terms__list-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media(min-width: 1230px){
+        padding-right: $padding-def*10;
+        padding-left: $padding-def*10;
+    }
+    @media(min-width: 769px) and (max-width: 1229px){
+        padding-right: $padding-def*2;
+        padding-left: $padding-def*2;
+    }
+    @media(max-width: 768px){
+        padding-right: $padding-def;
+        padding-left: $padding-def;
+    }
+}
 .p__terms__prologue {
-    margin: $margin-vertical * 2 $margin-horizontal * 2;
+    
     font-size: $item-content-size;
     line-height: 1.75em;
 }
@@ -36,18 +81,21 @@ ol{
 
 .p__terms__list {
     text-align: left;
-    margin: $margin-vertical $margin-horizontal;
+
     padding: 0 15px;
     h2 {
         font-size: $item-title-size;
         font-weight: bold;
+        @media(max-width: 768px){
+            font-size: $item-title-size-mini;
+        }
     }
 }
 
 .p__terms__list p,
 .p__terms__list-son p,
 .p__terms__list-son__item p {
-    margin-bottom: $margin-vertical;
+
     font-size: $item-content-size;
     padding-left: $item-content-size;
 }
@@ -55,9 +103,14 @@ ol{
 .p__terms__list p,
 .p__terms__list-son p,
 .p__terms__list-son__item p > *:first-child {
-    margin-top: $margin-vertical;
+    margin-top: calc(($margin-def)/2);
     line-height: 1.75em;
     
+}
+.p__terms__list p,
+.p__terms__list-son p,
+.p__terms__list-son__item p > *:last-child {
+    margin-bottom: calc(($margin-def)/2);
 }
 
 // オーダーリストに数字をつける

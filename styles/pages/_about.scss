@@ -57,7 +57,7 @@ $margin-def: 60px;
             margin-bottom: $margin-def;
         }
         @media(max-width: 768px){
-            font-size: ($content-content-h2-size)/2;
+            font-size: calc(($content-content-h2-size)/2);
             margin-bottom: $margin-def;
         }
     }
@@ -114,7 +114,7 @@ $margin-def: 60px;
             margin-bottom: $margin-def;
         }
         @media(max-width: 768px){
-            font-size: ($content-content-h2-size)/2;
+            font-size: calc(($content-content-h2-size)/2);
             margin-bottom: $margin-def;
         }
     }
@@ -170,7 +170,7 @@ $margin-def: 60px;
             }
         }
         @media(max-width: 768px){
-            font-size: ($content-content-h2-size)/2;
+            font-size: calc(($content-content-h2-size)/2);
             margin-bottom: $margin-def;
             text-align: center;
             padding-left: 0;

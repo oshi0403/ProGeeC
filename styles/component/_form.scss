@@ -27,12 +27,9 @@ $line-height-form: 1.75em;
     label {
         font-size: $component-text-size;
         text-align: left;
-        margin-bottom: $form-margin-bottom/2;
+        margin-bottom: calc(($form-margin-bottom)/2);
         line-height: $line-height-form;
 
-    }
-    input{
-        text-align: left;   
     }
 
     input#user_name,input#email,input#tel,input#com-name,#confirm{
@@ -40,12 +37,14 @@ $line-height-form: 1.75em;
         width: 100%;
         height: $component-title-size;
         margin-bottom: $form-margin-bottom;
+        text-align: left;
         
     }
     textarea{
         width: 100%;
         height: $component-title-size*3;
         margin-bottom: $form-margin-bottom;
+        text-align: left;
         
     }
     a{
@@ -56,4 +55,5 @@ $line-height-form: 1.75em;
         text-decoration: underline;
         color: $dark-gray;
     }
+        
 }

@@ -137,6 +137,7 @@ $menu-mini: 2em;
             }
             .l__header__hamburger__2{
                 opacity: 0;
+                transition: transform 1.0s ease-in-out;
             }
             .l__header__hamburger__3{
                 transform:translateY(-($ham-translate)) rotate(-315deg);
