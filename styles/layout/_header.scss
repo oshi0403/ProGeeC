@@ -7,19 +7,20 @@ $hamburger-space: 6px;
 $padding-ham: 5px;
 $header-opacity: 80%;
 $header__z-index: 5;
-$ham-translate: 16px;
+$ham-translate: 15px;
 $width-difference: 20px;
 $ham-side: 70px;
 $ham-position: 30px;
 $logo-size: 100px;
 $menu-large: 4em;
 $menu-mini: 2em;
+$margin-top: 100px;
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-.header{
+.l__header{
     position: fixed;
     left: 0;
     top: 0;
@@ -34,14 +35,30 @@ $menu-mini: 2em;
         width: 100%;
         padding: $padding-def;
     }
-
+    &.open{
+    
+        @media(min-width: 1230px){
+            width: 100%;
+            padding: 0;
+        }
+        @media(max-width: 1229px){
+            width: 100%;
+            padding: 0;
+        }
+    }   
 }
 .header__inner{
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @media (min-width: 1230px) {
+        padding: $padding-def*2;
+    }
+    @media(max-width: 1229px){
+        width: 100%;
+        padding: $padding-def;
+    }
+
     a{
         display: block;
         height: $logo-size;
@@ -50,13 +67,20 @@ $menu-mini: 2em;
             height: 100%;
             width: 100%;
             display: block;
+            .open{
+                @media(min-width: 1230px){
+                    top: $padding-def*2;
+                    left: $padding-def*2;
+                }
+                @media(max-width: 1229px){
+                    top: $padding-def;
+                    left: $padding-def;
+                }  
+            }
         }
     }
     &.open{
         background-color: $black;
-
-            
-        
     }
 }
 .header__menu{
@@ -68,14 +92,21 @@ $menu-mini: 2em;
             position: fixed;
             z-index: 100;
             background-color: $black;
+
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: $padding-def;
+    
             @media (min-width: 1230px) {
-                width: calc(100% - $padding-def*4);
                 top: 130px;
                 padding-left: $padding-def*2;
                 padding-right: $padding-def*2;
             }
             @media(max-width: 1229px){
-                width: calc(100% - $padding-def*2);
+                width: 100%;
                 padding-left: $padding-def;
                 padding-right: $padding-def;
             }

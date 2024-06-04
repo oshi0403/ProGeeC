@@ -16,6 +16,13 @@ $column-gap-footer-menu: 100px;
     margin-right: auto;
     padding: $footer-padding-vertical 0;
     background-color: $black;
+
+    .footer.open{
+        display: none;
+        .footer > *{
+            display: none;
+        }
+    }
 }
 
 .footer__border-top-black {

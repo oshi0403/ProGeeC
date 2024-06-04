@@ -14,7 +14,7 @@
     </head>
 
 
-        <header class = "header">
+        <header class = "l__header">
             <div class = "header__inner">
                 <a href = "<?php echo home_url(); ?>"><img  class = "header__logo" src = "<?php echo get_template_directory_uri(); ?>/assets/logo_ProGeeC_1.jpg" alt = "progeecのロゴ"></a>
                 <nav class = "header__menu">
