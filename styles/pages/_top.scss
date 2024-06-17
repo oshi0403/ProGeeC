@@ -18,15 +18,12 @@ $mv-padding-ver: 300px;
 .main{
     @media(min-width: 1230px){
         max-width: 1230px;
-
     }
     @media(max-width: 1229px) and (min-width:769px){
         max-width: 100%;
-
     }
     @media(max-width: 768px){
         max-width: 100%;
-
     }
     margin-left: auto;
     margin-right: auto;
@@ -44,7 +41,7 @@ $mv-padding-ver: 300px;
         max-width: 100%;
     }
     margin-top: 130px;
-    padding: $mv-padding-ver 0;
+    padding: $mv-padding-ver 0 calc($mv-padding-ver - 228px) 0;
     background-color: $black;
 }
 .top__content-about-mv-1 {
@@ -103,7 +100,9 @@ $mv-padding-ver: 300px;
 
     h1{
         font-size: $content-title-size;
-        font-weight: 900;//個別にh1などをネストして書くことができる
+        font-family: "akhand", sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 }
 .top__content-company-detail, .top__content-service-detail {

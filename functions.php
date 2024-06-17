@@ -29,8 +29,8 @@ function enqueue_custom_scripts() {
 
     // JavaScriptファイルに渡すデータを用意
     $script_data = array(
-        'originalSrc' => get_template_directory_uri() . '/assets/logo_ProGeeC_1.jpg',
-        'newSrc' => get_template_directory_uri() . '/assets/logo_ProGeeC_re.jpg'
+        'originalSrc' => get_template_directory_uri() . '/assets/progeec_logo-mini.png',
+        'newSrc' => get_template_directory_uri() . '/assets/progeec_logo_re-mini.png'
     );
 
     // wp_localize_script を使用してデータを渡す

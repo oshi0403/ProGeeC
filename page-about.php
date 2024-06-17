@@ -8,7 +8,7 @@
 <main>
             <section id = "about-mission">
                 <div class = "about__mv about-mission__mv">
-                    <h1>MISSION</h1>
+                    <h1>Mission</h1>
                 </div>
                 <div class = "about-mission__contents">
                     <h2>
@@ -23,7 +23,7 @@
             <section id = "about-vision">
                 <div class = "about-vision">
                     <div class = "about__mv about-vision__mv">
-                        <h1>VISION</h1>
+                        <h1>Vision</h1>
                     </div>
                     <div class = "about-vision__content">
                         <h2>
@@ -43,7 +43,7 @@
             </section>
             <section id = "about-value">
                 <div class = "about__mv about-value__mv">
-                    <h1>VALUE</h1>
+                    <h1>Value</h1>
                 </div>
                 <div class = "about-value__content">
 

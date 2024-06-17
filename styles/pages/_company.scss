@@ -4,8 +4,8 @@ $p__company-padding-vertical: 30px;
 $p__company-padding-horizontal: 20px;
 $p__company-title-size: 3em;
 $p__company-subtitle-size: 2em;
-$p__company-text-size-large: 1.5em;
-$p__company-text-size: 1em;
+$p__company-text-size-large: 2.0em;
+$p__company-text-size: 1.5em;
 $p__company-content-space: 60px;
 
 .p__company-greeting{
@@ -24,7 +24,9 @@ $p__company-content-space: 60px;
     
     h1{
         font-size: $p__company-title-size;
-        font-weight: bold;
+        font-family: "akhand", sans-serif;
+        font-weight: 700;
+        font-style: normal;
         @media(min-width: 1230px){
             font-size: $p__company-title-size;
             margin-bottom: $p__company-content-space*2
@@ -77,15 +79,17 @@ $p__company-content-space: 60px;
     }
     .p__company-detail-text{
         width:55%;
-        padding: 0 $p__company-padding-horizontal;
+        padding-bottom: $p__company-padding-vertical*2;
         display: flex;
         flex-direction: column;//縦並び
         align-items: center;
         justify-content: center;
+        @media(min-width: 1230px){
+            padding-right: 105px;
+        }
         @media(max-width: 1229px){
             width: 100%;
             padding: 0;
-
         }
         h2{
             font-size: $p__company-subtitle-size;

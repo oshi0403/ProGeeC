@@ -16,7 +16,7 @@ $margin-def: 60px;
     margin-top: $margin-vertical ;
     margin-right:auto;
     margin-left: auto;
-    padding: $padding-def*2;
+    padding: $padding-def*2 $padding-def*10;
     h1 {
         font-size: $mv-size;
         font-weight: bold;

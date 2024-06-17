@@ -14,7 +14,7 @@
     <section id="top__content-company">
         <div>
             <div class="top__content-title top__content-company-title">
-                <h1>COMPANY</h1>
+                <h1>Company</h1>
             </div>
             <div class="top__content-company-detail">
                 <div class="top__content-company-image">
@@ -35,28 +35,46 @@
     <section id="top__content-service">
         <div>
             <div class="top__content-title top__content-service-title">
-                <h1>SERVICE</h1>
+                <h1>Service</h1>
             </div>
             <div class="top__content-service-detail">
+            <div class="top__content-service-text">
+                    <h1>キャッチコピー</h1>
+                    <!-- <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p> -->
+                    <a class="component__btn-readmore" href="<?php echo home_url(); ?>/service">Read More</a>
+            </div>
+
                 <div class="top__content-service-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/progeec_business.png" alt="事業のイメージ画像or幾何学的な画像"></src>
                 </div>
-
-                <div class="top__content-service-text">
-                    <h1>キャッチコピー</h1>
-                    <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p>
-                    <a class="component__btn-readmore" href="<?php echo home_url(); ?>/service">Read More</a>
-                </div>
-
-
-            </div>
+        </div>
         </div>
     </section>
     <section id="top__content-news">
         <div class="top__content-news-detail">
             <div class="top__content-title top__content-news-title">
-                <h1>NEWS</h1>
+                <h1>News</h1>
             </div>
+            <div class = "p__achive-news">
+<?php
+    $args = array(
+        'post_type' => 'news_page',
+        'posts_per_page' => 12,
+    );
+    $news_query = new WP_Query($args);
+    if ($news_query->have_posts()) : ?>
+        <dl class="p__achive-news__item">
+            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+                <dt><?php the_time('Y-m-d'); ?></dt>
+                <dd>
+                    <a class= "p__achive-news__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </dd>
+                <span class = "c__line-horizontal"></span>
+            <?php endwhile; ?>
+        </dl>
+    <?php endif;
+    wp_reset_postdata();
+    ?>
 
         <a class="component__btn-readmore" href="<?php echo home_url(); ?>/news">Read More</a>
 
@@ -66,7 +84,7 @@
     <section id="top__content-contact">
         <div>
             <div class="top__content-title top__content-contact-title">
-                <h1>CONTACT</h1>
+                <h1>Contact</h1>
             </div>
             <div class="c__form__contact">
                 <h1>お問い合わせフォーム</h1>

@@ -8,6 +8,9 @@ $form-margin-bottom: 30px;
 $padding-horizontal:15px;
 $padding-vertical: 15px;
 $line-height-form: 1.75em;
+$radio_height: 18px;
+$radio_width: 160px;
+$radio_between: 100px;
 
 .c__form__contact{
 
@@ -15,21 +18,34 @@ $line-height-form: 1.75em;
     padding: $padding-vertical $padding-horizontal;
     line-height: $line-height-form;
 
+    @media(min-width: 1230px){
+        width: 840px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        width: 840px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media(max-width: 768px){
+        max-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
     h1{
         font-size: $component-title-size;
         text-align: center;
         margin-bottom: $form-margin-bottom;
         @media (max-width: 768px) {
             font-size: $component-title-size-mini;
-    
         }
     }
     label {
         font-size: $component-text-size;
         text-align: left;
-        margin-bottom: calc(($form-margin-bottom)/2);
+        margin-bottom: $form-margin-bottom;
         line-height: $line-height-form;
-
     }
 
     input#user_name,input#email,input#tel,input#com-name,#confirm{
@@ -55,5 +71,20 @@ $line-height-form: 1.75em;
         text-decoration: underline;
         color: $dark-gray;
     }
-        
+}
+.wpcf7-list-item {
+    display: inline-block;
+    margin: $form-margin-bottom;
+    margin-left: 0;
+    font-size: $component-text-size;
+    height: $radio_height;
+    width: $radio_width;
+    &.last{
+        width: 100px;
+    }
+}
+.c__form-br{
+    @media(min-width: 1230px){
+        display: none;
+    }
 }

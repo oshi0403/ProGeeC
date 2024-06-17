@@ -4,37 +4,34 @@
                     <nav class = "footer__menu">
                         <ul class = "footer__menu-item">
                             <li class = "menu__item footer__menu-item-about">
-                                <h2>About us</h2>
+                                <a href = "<?php echo home_url(); ?>/about">About us</a>
                                     <ul class = "footer__submenu">
-                                        <li><h4 class = "footer__submenu-item">ミッション</h4></li>
-                                        <li><h4 class = "footer__submenu-item">ビジョン</h4></li>
-                                        <li><h4 class = "footer__submenu-item">バリュー</h4></li>
-                                        <li><h4 class = "footer__submenu-item">代表挨拶</h4></li>
+                                        <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/about#about-mission">ミッション</a></li>
+                                        <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/about#about-vision">ビジョン</a></li>
+                                        <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/about#about-value">バリュー</a></li>
                                     </ul>
                             </li>
                             <li class = "menu__item footer__menu-item-company">
-                                <h2>Company</h2>
+                                <a href = "<?php echo home_url(); ?>/company">Company</a>
                                 <ul class = "footer__submenu">
-                                    <li><h4 class = "footer__submenu-item">会社概要</h4></li>
-                                    <li><h4 class = "footer__submenu-item">メンバー紹介</h4></li>
-                                    <li><h4 class = "footer__submenu-item">沿革</h4></li>
-                                    <li><h4 class = "footer__submenu-item">オフィス</h4></li>
+                                    <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/company#greeting">代表挨拶</a></li>
+                                    <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/company#company-info">会社概要</a></li>
                                 </ul>
                             </li>
                                 <li class = "menu__item footer__menu-item-service">
-                                    <h2>Service</h2>
+                                    <a href = "<?php echo home_url(); ?>/service">Service</a>
                                     <ul class = "footer__submenu">
-                                        <li><h4 class = "footer__submenu-item">サービス一覧</h4></li>
+                                        
                                     </ul>
 
                                 </li>
-                                <li class = "menu__item footer__menu-item-news"><h2>News</h2></li>
-                                <li class = "menu__item footer__menu-item-recruit">
+                                <li class = "menu__item footer__menu-item-news"><a href = "<?php echo home_url(); ?>/news">News</a></li>
+                                <!-- <li class = "menu__item footer__menu-item-recruit"> -->
 
                                 <li class = "menu__item footer__menu-item-contact">
-                                    <h2>Contact</h2>
+                                <a href = "<?php echo home_url(); ?>/#top__content-contact">Contact</a>
                                     <ul class = "footer__submenu">
-                                        <li><h4 class = "footer__submenu-item">お問い合わせ</h4></li>
+                                    <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/#top__content-contact">お問い合わせ</a></li>
                                     </ul>
                                 </li>
                         </ul>

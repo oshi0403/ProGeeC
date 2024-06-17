@@ -2,13 +2,12 @@ $black: #000000;
 $white: #ffffff;
 $padding-horizontal:30px;
 $padding-vertical:20px;
-$readmore-text-size :1em;
-$policy-text-size: 3em;
-$policy-text-size-mini: 1.5em;
+$readmore-text-size :1.5em;
+$policy-text-size: 1.5em;
 $send-text-size: 1.5em;
-$width-btn-readmore: 200px;
+$width-btn-readmore: 250px;
 $width-btn-send: 300px;
-$width-btn-policy: 640px;
+$width-btn-policy: 320px;
 $width-btn-policy-mini: 320px;
 $transition-btn: .25s;
 $margin-btn-policy: 60px;
@@ -18,7 +17,6 @@ $padding-def: 15px;
     display: inline-block;
     width: $width-btn-readmore;
     max-width: 100%;//画面の横幅が＄width-btn以下になった時に画面外にボタンがはみ出るのを防ぐ
-    padding: $padding-vertical $padding-horizontal;
     background-color: $black;
     border: 2px solid transparent;
     color: $white;
@@ -28,8 +26,10 @@ $padding-def: 15px;
     transition: $transition-btn;
     //以下は矢印のためのスタイリング
     position:relative;
-    padding-right: $readmore-text-size;
-    padding-left: $readmore-text-size;
+    padding: calc($readmore-text-size/2);
+    font-family: "akhand", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 
     &:hover{ //同じ要素について疑似要素を実装するときにはネストする際＆が必須！
         background-color: $white;
@@ -40,7 +40,7 @@ $padding-def: 15px;
     &::after{
         content:'\f061';//右矢印の番号
         position: absolute;
-        padding: $padding-vertical $padding-horizontal;
+        padding: 0 0 0 $padding-horizontal;
         @media (max-width: 1229px) {
             padding: 0 0 0 10px; /* 順番は 上 右 下 左 */
         }
@@ -56,15 +56,12 @@ $padding-def: 15px;
     @media(min-width: 1230px){
         width: $width-btn-policy;
         padding: $padding-vertical $padding-horizontal;
-        font-size: $policy-text-size;
     }
     @media(max-width: 1229px) and (min-width:769px){
         width: $width-btn-policy-mini;
-        font-size: $policy-text-size-mini;
     }
     @media(max-width: 768px){
         width: $width-btn-policy-mini;
-        font-size: $policy-text-size-mini;
         padding:$padding-def; 
 
     }
@@ -78,6 +75,8 @@ $padding-def: 15px;
     
     vertical-align: middle;
     text-decoration: none;
+    font-weight: bold;
+    font-size: $policy-text-size;
     transition: $transition-btn;
     //以下は矢印のためのスタイリング
     // position:relative;

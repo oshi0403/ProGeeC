@@ -11,7 +11,8 @@ $ham-translate: 15px;
 $width-difference: 20px;
 $ham-side: 70px;
 $ham-position: 30px;
-$logo-size: 100px;
+$logo-size-height: 93px;
+$logo-size-width: 64px;
 $menu-large: 4em;
 $menu-mini: 2em;
 $margin-top: 100px;
@@ -29,11 +30,9 @@ $margin-top: 100px;
 
     @media(min-width: 1230px){
         width: 100%;
-        padding: $padding-def*2;
     }
     @media(max-width: 1229px){
         width: 100%;
-        padding: $padding-def;
     }
     &.open{
     
@@ -61,13 +60,14 @@ $margin-top: 100px;
 
     a{
         display: block;
-        height: $logo-size;
-        width: $logo-size;
+        height: $logo-size-height;
+        width: $logo-size-width;
         .header__logo{
             height: 100%;
             width: 100%;
             display: block;
-            .open{
+
+            &.open{
                 @media(min-width: 1230px){
                     top: $padding-def*2;
                     left: $padding-def*2;
@@ -93,9 +93,9 @@ $margin-top: 100px;
             z-index: 100;
             background-color: $black;
 
-            width: 100vw;
-            height: 100vh;
-            top: 0;
+            width: 100vw;// view-width
+            height: 100vh;// view-height
+            top: 100px;//いじっていたらメニューが上に上がってロゴが隠れちゃうようになったのでつけた
             left: 0;
             margin: 0;
             padding: $padding-def;
@@ -122,8 +122,11 @@ $margin-top: 100px;
             a{
                 width: 100%;
                 color: $white;
-                font-weight: bold;
+                font-family: "akhand", sans-serif;
+                font-weight: 700;
+                font-style: normal;
                 text-decoration: none;
+
 
                 @media (min-width: 1230px) {
                     margin-bottom: $margin-def;

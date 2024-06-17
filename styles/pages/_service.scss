@@ -6,10 +6,14 @@ $item-subtitle-size: 1.5em;
 $item-content-size: 1em;
 $margin-horizontal:6em;
 $margin-vertical: 2em;
+$margin-def: 60px;
 
 .p__service__mv{
     display:flex;
     justify-content: center;
+    max-width: 100%;
+    margin-top: 130px;
+    margin-bottom: $margin-def;
     h1{
         font-size: $mv-size;
         font-weight: bold;

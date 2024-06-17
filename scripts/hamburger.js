@@ -20,7 +20,7 @@ document.querySelector('.l__header__hamburger').addEventListener('click',functio
     }
 
     if (logo){
-        if (logo.src.includes('logo_ProGeeC_1.jpg')){
+        if (logo.src.includes('progeec_logo-mini.png')){
             logo.src = logoData.newSrc;
         } else {
             logo.src = logoData.originalSrc;

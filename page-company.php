@@ -11,7 +11,7 @@
             <section id = "greeting">
                 <div class = "p__company-greeting">
                     <div class = "p__company-title">
-                        <h1>GREETING</h1>
+                        <h1>Greeting</h1>
                     </div>
                     <div class = "p__company-detail">
                         <div class = "p__company-detail-image">
@@ -38,7 +38,7 @@ Progeeecの「Pro」はその道の専門家としてプロの仕事をすると
 
             <section id = "company-info">
                 <div class = "p__company-title">
-                    <h1>COMPANY&nbsp;&nbsp;INFO</h1>
+                    <h1>Company&nbsp;&nbsp;Info.</h1>
                     <div class = "p__company-info-content">
                     <span class = "c__line-horizontal"></span>
                         <p class= "p__company__info-title">社&nbsp;&nbsp;名<p>
@@ -54,7 +54,7 @@ Progeeecの「Pro」はその道の専門家としてプロの仕事をすると
                         <p class= "p__company__info-title">事業内容<p>
                         <br>
                         <br>
-                        <p>有料職業紹介事業・採用コンサルティング事業</p>
+                        <p>有料職業紹介事業<br>採用コンサルティング事業</p>
                         <span class = "c__line-horizontal"></span>
                         <p class= "p__company__info-title">代表者<p>
                         <br>
@@ -69,7 +69,7 @@ Progeeecの「Pro」はその道の専門家としてプロの仕事をすると
                         <p class= "p__company__info-title">事業許可番号<p>
                         <br>
                         <br>
-                        <p></p>
+                        <p>認可待ち</p>
                         <span class = "c__line-horizontal"></span>
                         <p class= "p__company__info-title">資本金<p>
                         <br>

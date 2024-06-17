@@ -9,6 +9,7 @@
 
         <link href ="https://cdn.jsdelivr.net/npm/css-wipe@4.3.0/index.min.css" rel ="stylesheet"><!-- <リセットCSS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/><!--矢印のためのフォントを表示するためのリンク -->
+        <link rel="stylesheet" href="https://use.typekit.net/izn3vqz.css">
 
         
     </head>
@@ -16,7 +17,7 @@
 
         <header class = "l__header">
             <div class = "header__inner">
-                <a href = "<?php echo home_url(); ?>"><img  class = "header__logo" src = "<?php echo get_template_directory_uri(); ?>/assets/logo_ProGeeC_1.jpg" alt = "progeecのロゴ"></a>
+                <a href = "<?php echo home_url(); ?>"><img  class = "header__logo" src = "<?php echo get_template_directory_uri(); ?>/assets/progeec_logo-mini.png" alt = "progeecのロゴ"></a>
                 <nav class = "header__menu">
                     <ul>
                         <li><a href = "<?php echo home_url(); ?>/about" class = "header__menu header__menu-about">About us</a></li>

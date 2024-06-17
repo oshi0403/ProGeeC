@@ -14,30 +14,35 @@ $margin-def: 60px;
 }
 .c__confirm__table__header{
     padding: $padding-table;
-    border-right: 1px solid currentColor;
-    color: $black;
+    border-right: 1px solid $white;
+    color: $white;
     text-align: center;
     .c__confirm__table__header:last-child{
         border-right:0;
     }
 }
 .c__confirm__table__body__title{
-    background-color: $light-gray;
+    background-color: $black;
+    color: $white;
     font-size: 1.125rem;
+    width: 30%;
 }
 .c__confirm__table__body__text{
     font-size: 1.875rem;
+    width: 70%;
 }
 .c__confirm__table__body__title{
     padding: $padding-table;
-    border-top: 1px solid $black;
-    border-left: 1px solid $black;
+    
+    border-top: 1px solid $white;
+    border-left: 1px solid $white;
     font-weight:bold;
     text-align: left;
     vertical-align: center;
 }
 .c__confirm__table__body__text{
     padding: $padding-table;
+
     border-top: 1px solid $black;
     border-right: 1px solid $black;
     border-left: 1px solid $black;
