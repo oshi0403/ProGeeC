@@ -1,13 +1,38 @@
 $black: #000000;
 $white: #ffffff;
 $mv-size: 4em;
+$mv-size-mini: 2.5em;
 $item-title-size: 2em;
+$item-title-size-mini: 1.5em;
 $item-subtitle-size: 1.5em;
+$item-subtitle-size-mini: 1em;
 $item-content-size: 1em;
 $margin-horizontal:6em;
 $margin-vertical: 2em;
 $margin-def: 60px;
 
+
+.p__service__all-grid{
+    display: flex;
+    flex-direction: column;//子要素を縦並びにする（columnって列だよねって話）
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    @media(min-width: 1230px){
+        padding: 0 15% 0 15%;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        padding: 0 10% 0 10%;
+    }
+    @media(max-width: 768px){
+        padding: 0 $item-subtitle-size 0 $item-subtitle-size;
+    }
+    #p__service_toB, #p__service_toC{
+        width: 100%;
+    }
+}
 .p__service__mv{
     display:flex;
     justify-content: center;
@@ -17,5 +42,58 @@ $margin-def: 60px;
     h1{
         font-size: $mv-size;
         font-weight: bold;
+        @media(max-width: 1229px){
+            font-size: $mv-size-mini;
+        }
+        
+    }
+}
+#p__service_all{
+    h1{
+        text-align: center;
+        font-weight: 700;
+        font-size: $item-title-size;
+        margin-bottom:calc(($margin-def)/2);
+        
+        @media(max-width: 768px){
+            font-size: $item-subtitle-size;
+        }
+    }
+    p{
+        font-size: $item-content-size;
+        margin-bottom: $margin-def;
+    }
+}
+.p__service__text{
+    width: 80%;
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+    
+    h1{
+        font-size: $item-title-size;
+        font-weight: 700;
+        margin:$margin-def 0; 
+        @media(max-width: 1229px){
+            font-size: $item-title-size-mini;
+        }
+    }
+}
+.p__service__image{
+    width: 90%;
+    max-width: 1360px;
+    @media(max-width: 1229px){
+        width: 100%;
+    }
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $margin-def;
+    img{
+        width: 100%; 
+        height: auto; /* アスペクト比を保つ */
+        object-fit: cover; /* 画像が親要素に収まるように調整 */
     }
 }

@@ -29,11 +29,13 @@ $margin-def: 60px;
 }
 
 .about-mission__contents{
-
     background-color: $white;
     text-align: left;
     padding-left: 15%;
     padding-right: 15%;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
 
     @media(min-width: 1230px){
         padding: 0 20% 0 20%;
@@ -87,10 +89,13 @@ $margin-def: 60px;
     color: $white;
 }
 .about-vision__content{
-    
     text-align: left;
     padding-left: 15%;
     padding-right: 15%;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    
     @media(min-width: 1230px){
         padding: 0 20% 0 20%;
     }
@@ -142,18 +147,27 @@ $margin-def: 60px;
     align-items: center;
     margin-bottom: $margin-content-text;
 
-    .about-value__content__item{
+    .about__content__item{
         
-        text-align: center;
-        max-width: 100%;
-        padding: $about-padding-vertical $about-padding-horizontal;
+        text-align: left;
+        width: 100%;
+        max-width: 1600px;
+        margin: auto;
+        @media(min-width: 1230px){
+            padding: 0 20% 0 20%;
+        }
+        @media(max-width: 1229px) and (min-width:769px){
+            padding: 0 10% 0 10%;
+        }
+        @media(max-width: 768px){
+            padding: 0 $about-padding-horizontal 0 $about-padding-horizontal;
+            text-align: center;
+        }
     }
     .about-value__content__title{
 
         font-weight: bold;
         text-align: left;
-        padding-left: 15%;
-        padding-right: 15%;
         
         @media(min-width: 1230px){
             font-size: $content-content-h2-size;
@@ -179,8 +193,6 @@ $margin-def: 60px;
     }
     .about-value__content__text{
         text-align: left;
-        padding-left: 15%;
-        padding-right: 15%;
 
         @media(min-width: 1230px){
             font-size: $content-text-size;

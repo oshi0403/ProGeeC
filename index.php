@@ -39,8 +39,11 @@
             </div>
             <div class="top__content-service-detail">
             <div class="top__content-service-text">
-                    <h1>キャッチコピー</h1>
-                    <!-- <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります</p> -->
+                    <h1>貴社人材の母集団形成からサポートさせていただきます</h1>
+                    <p>当社の人材紹介事業では、
+                        リクルーティングアドバイザー（RA）がお預かりした求人情報を基に、
+                        キャリアアドバイザー（CA）がキャリアカウンセリングを実施。
+                        適切なマッチングを行い、貴社の採用ターゲットに合った適切な人材をご紹介します。</p>
                     <a class="component__btn-readmore" href="<?php echo home_url(); ?>/service">Read More</a>
             </div>
 

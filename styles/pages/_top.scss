@@ -29,6 +29,15 @@ $mv-padding-ver: 300px;
     margin-right: auto;
     margin-top: 130px;
 }
+p , h1, h2, h4{
+    // font-family: "Sawarabi Gothic", sans-serif;
+    // font-family: 'Noto Sans JP', sans-serif;
+    // font-family: "Shippori Mincho", serif;
+    // font-family: 'Hiragino Maru Gothic ProN W4'; //ヒラギノ丸ゴシック ProN
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-weight: 500;
+    font-style: normal;
+}
 
 .top__content-about-mv{
     @media(min-width: 1230px){
@@ -109,6 +118,10 @@ $mv-padding-ver: 300px;
     display: flex;
     justify-content: space-between;
     line-height:$line-height;
+
+    p{
+        font-weight: 700;
+    }
 
 }
 .top__content-company-image, .top__content-service-image {

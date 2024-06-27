@@ -29,12 +29,17 @@ $p__news-margin-def: 60px;
     dt{
         font-size: $p__news-text-size;
         color: $silver;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        font-weight: 500;
+        font-style: normal;
     }
     .p__achive-news__link{
         text-decoration: none;
         color: $black;
         font-size: $p__news-subtitle-size;
         font-weight: bold;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        font-style: normal;
     }
     span{
         margin-top:$p__news-margin-def;

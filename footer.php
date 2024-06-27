@@ -21,6 +21,8 @@
                                 <li class = "menu__item footer__menu-item-service">
                                     <a href = "<?php echo home_url(); ?>/service">Service</a>
                                     <ul class = "footer__submenu">
+                                    <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/service#p__service_toB">企業側向けサービス</a></li>
+                                    <li class = "footer__submenu-item"><a href = "<?php echo home_url(); ?>/service#p__service_toC">求職者向けサービス</a></li>
                                         
                                     </ul>
 

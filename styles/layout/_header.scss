@@ -171,7 +171,7 @@ $margin-top: 100px;
             }
             .l__header__hamburger__2{
                 opacity: 0;
-                transition: transform 1.0s ease-in-out;
+                transition: display 1.0s ease-in-out;
             }
             .l__header__hamburger__3{
                 transform:translateY(-($ham-translate)) rotate(-315deg);
@@ -187,8 +187,8 @@ $margin-top: 100px;
                 background-color: $black;
             }
             .l__header__hamburger__2{
-                opacity: 100;
-                transition: transform 1.0s ease-in-out;
+                
+                transition: opacity 1s, display 1s allow-discrete;
             }
             .l__header__hamburger__3{
                 transform: translateY(0) rotate(0);

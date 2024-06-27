@@ -11,6 +11,7 @@
                     <h1>Mission</h1>
                 </div>
                 <div class = "about-mission__contents">
+                    <div class = "about__content__item">
                     <h2>
                         プロフェッショナル
                         <br>
@@ -18,6 +19,7 @@
                         <br>
                     </h2>
                     <p>仕事や人生においてプロフェッショナル（「その道にたけている人」「その道に対して没頭しており前のめりである人」「常に挑戦している人」「歩みを続けている人」「マジな人」などの総称としての位置づけ）として、活動できる/行動できる人たちで溢れる社会を掲げたVision/Valueを通して実現していくことで、全てのヒト・組織が活力を持って日々を過ごしていけるような社会を作っていく。また、そういった日本社会を実現することで、ひいては世界で戦うことができる日本を作っていくきっかけとなる。</p>
+                    </div>
                 </div>
             </section>
             <section id = "about-vision">
@@ -26,6 +28,7 @@
                         <h1>Vision</h1>
                     </div>
                     <div class = "about-vision__content">
+                    <div class = "about__content__item">
                         <h2>
                             関わるヒト・組織の
                             <br>
@@ -37,6 +40,7 @@
                             また、伴奏者として自身（自社）も常に挑戦をし続ける／成長し続ける組織であること。
                         </p>
                     </div>
+                    </div>
 
                 </div>
                 
@@ -47,7 +51,8 @@
                 </div>
                 <div class = "about-value__content">
 
-                            <div class = "about-value__content__item about-value__content__1">
+                            <div class = "about__content__item about-value__content__1">
+                                
                                 <div  class = "about-value__content__title"><h2>歩み続けよう</h2></div>
                                 <div class = "about-value__content__text">
                                     <p>
@@ -61,7 +66,7 @@
                             </div>
                             </div>
 
-                            <div class = "about-value__content__item about-value__content__2">
+                            <div class = "about__content__item about-value__content__2">
                                 <div class = "about-value__content__title"><h2>最善ではなく<br class = "p__about__br-responce">最高（マジ）になる</h2></div>
                                 <div class = "about-value__content__text">
                                 <p>
@@ -73,7 +78,7 @@
                             </div>
                             </div>
 
-                            <div class = "about-value__content__item about-value__content__3">
+                            <div class = "about__content__item about-value__content__3">
                                 <div class = "about-value__content__title"><h2>信用にこだわり、<br class = "p__about__br-responce">信頼を届ける</h2></div>
                                 <div class = "about-value__content__text">
                                 <p>

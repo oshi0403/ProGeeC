@@ -7,13 +7,25 @@ $p__company-subtitle-size: 2em;
 $p__company-text-size-large: 2.0em;
 $p__company-text-size: 1.5em;
 $p__company-content-space: 60px;
+$padding-def-info: 15px;
 
 .p__company-greeting{
     display: flex;
     flex-direction: column;//子要素を縦並びにする（columnって列だよねって話）
     align-items: center;
     justify-content: center;
-    padding: $p__company-padding-vertical $p__company-padding-horizontal;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    @media(min-width: 1230px){
+        padding: 0 15% 0 15%;
+    }
+    @media(max-width: 1229px) and (min-width:769px){
+        padding: 0 10% 0 10%;
+    }
+    @media(max-width: 768px){
+        padding: 0 $p__company-padding-horizontal 0 $p__company-padding-horizontal;
+    }
 }
 
 .p__company-title{
@@ -84,13 +96,6 @@ $p__company-content-space: 60px;
         flex-direction: column;//縦並び
         align-items: center;
         justify-content: center;
-        @media(min-width: 1230px){
-            padding-right: 105px;
-        }
-        @media(max-width: 1229px){
-            width: 100%;
-            padding: 0;
-        }
         h2{
             font-size: $p__company-subtitle-size;
             font-weight: bold;
@@ -102,6 +107,7 @@ $p__company-content-space: 60px;
         }
         p{
             font-size: $p__company-text-size;
+            font-weight: 500;
             @media(max-width: 1229px){
                 font-size: $p__company-text-size;
                 padding: 0 $p__company-padding-horizontal
@@ -112,11 +118,11 @@ $p__company-content-space: 60px;
 .p__company-info-content{
 
     @media(min-width: 1230px){
-        width: 840px;
+        max-width: 840px;
         margin: $p__company-content-space auto;
     }
     @media(max-width: 1229px) and (min-width:769px){
-        width: 840px;
+        max-width: 840px;
         margin: $p__company-content-space auto;
     }
     @media(max-width: 768px){
@@ -129,6 +135,7 @@ $p__company-content-space: 60px;
     p{
         text-align: left;
         font-size: $p__company-text-size;
+        padding: $padding-def-info;
     }
 }
 .p__company-history{
